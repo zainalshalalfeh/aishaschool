@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+        <link rel="icon" type="image/png" href="lif (1).png" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأنظمة الأكاديمية - مدرسة عائشة أم المؤمنين</title>
+    <meta name="description" content="تعرف على الأنظمة التعليمية في مدرسة عائشة أم المؤمنين: النظام الأردني والنظام البريطاني">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5530;
+            --secondary: #4a7c59;
+            --accent: #c48e5f;
+            --light: #f8f9fa;
+            --dark: #2d3e36;
+            --neutral: #6c757d;
+            --success: #7aa893;
+            --warning: #e6c57a;
+            --danger: #d97706;
+            --gradient: linear-gradient(135deg, #2c5530, #4a7c59);
+            --gradient-light: linear-gradient(135deg, #4a7c59, #c48e5f);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            transition: font-size 0.3s ease, filter 0.3s ease;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* أحجام الخطوط المختلفة */
+        body.font-small {
+            font-size: 14px;
+        }
+
+        body.font-medium {
+            font-size: 16px;
+        }
+
+        body.font-large {
+            font-size: 18px;
+        }
+
+        /* التباين العالي */
+        body.contrast-high {
+            --primary: #000000;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #000000;
+            --accent: #ff6600;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.contrast-high * {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border-color: #000000 !important;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* شريط الأخبار */
+        .news-bar {
+            background-color: var(--primary);
+            color: #fff;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-wrapper {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 60s linear infinite;
+        }
+
+        .news-wrapper a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 50px;
+            font-size: 14px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* زر إمكانية الوصول */
+        .accessibility-side {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .accessibility-btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .accessibility-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .accessibility-dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            min-width: 180px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+        }
+
+        .accessibility-dropdown a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .accessibility-dropdown a:hover {
+            background-color: #eee;
+        }
+
+        /* ========== الشريط العلوي المحدث ========== */
+        .main-nav {
+            background: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .language-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* بقية التنسيقات تبقى كما هي */
+        .page-header {
+            background: var(--gradient);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* الأنظمة الأكاديمية */
+        .academic-systems {
+            padding: 60px 0;
+            background: var(--light);
+        }
+
+        .systems-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .systems-header h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .systems-header p {
+            font-size: 1.1rem;
+            color: var(--dark);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .systems-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .system-tab {
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 12px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .system-tab.active {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(44, 85, 48, 0.3);
+        }
+
+        .system-tab:hover:not(.active) {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .system-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .system-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .system-overview {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-right: 5px solid var(--primary);
+        }
+
+        .system-overview h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .system-overview p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .grade-level {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .grade-level:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .grade-level h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .subjects-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .subjects-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f8f9fa;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .subjects-list li:before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .specializations {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .specializations h3 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.8rem;
+            font-weight: 700;
+        }
+
+        .spec-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+
+        .spec-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+
+        .spec-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        }
+
+        .spec-card h4 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .spec-card p {
+            color: var(--dark);
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        .spec-features h5 {
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin: 1.2rem 0 0.8rem;
+            font-weight: 600;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .feature-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-column li {
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .feature-column li:before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            margin-left: 6px;
+        }
+
+        .comparison-table {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            overflow-x: auto;
+        }
+
+        .comparison-table h3 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.8rem;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 12px;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e9ecef;
+            text-align: right;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(196, 142, 95, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* التذييل */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 50px 0 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo i {
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* تأثيرات الحركة */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تحسينات للعرض على الجوال */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .systems-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .system-tab {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+            
+            .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .spec-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .systems-header h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-medium">
+    <!-- شريط الأخبار -->
+    <div class="news-bar">
+        <div class="news-wrapper">
+            <a href="#" id="news1">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#" id="news2">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+            <a href="#" id="news3">إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية</a>
+            <a href="#" id="news4">وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي</a>
+            <a href="#" id="news5">زيادة عدد المدارس الحكومية المجهزة بالتقنيات الحديثة في الأردن</a>
+            <!-- تكرار لضمان استمرار الحركة -->
+            <a href="#" id="news6">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#" id="news7">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+        </div>
+    </div>
+
+    <!-- زر إمكانية الوصول -->
+    <div class="accessibility-side">
+        <button class="accessibility-btn" title="إمكانية الوصول" onclick="toggleAccessibility()">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-dropdown" id="accessibilityDropdown">
+            <a href="#" onclick="changeFontSize('small')"><i class="fas fa-text-height"></i> <span id="access-small">نص صغير</span></a>
+            <a href="#" onclick="changeFontSize('medium')"><i class="fas fa-text-height"></i> <span id="access-medium">نص متوسط</span></a>
+            <a href="#" onclick="changeFontSize('large')"><i class="fas fa-text-height"></i> <span id="access-large">نص كبير</span></a>
+            <a href="#" onclick="changeContrast('high')"><i class="fas fa-adjust"></i> <span id="access-high">تباين عالي</span></a>
+            <a href="#" onclick="changeContrast('normal')"><i class="fas fa-adjust"></i> <span id="access-normal">تباين عادي</span></a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h1 id="school-name">مدرسة عائشة أم المؤمنين</h1>
+                            <p id="school-subtitle">الثانوية الشاملة المختلطة - لواء سحاب</p>
+                        </div>
+                    </a>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="nav-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" class="active" id="nav-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="nav-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="nav-contact">اتصل بنا</a></li>
+                        <li>
+                            <button class="language-btn" onclick="toggleLanguage()" title="تغيير اللغة">
+                                <i class="fas fa-language"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 id="page-title">الأنظمة الأكاديمية</h1>
+                <p id="page-subtitle">نظامان تعليميان متميزان لإعداد جيل المستقبل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأنظمة الأكاديمية -->
+    <section class="academic-systems">
+        <div class="container">
+            <div class="systems-header">
+                <h2 id="systems-main-title">اختر مسارك التعليمي</h2>
+                <p id="systems-description">
+                    نقدم في مدرسة عائشة أم المؤمنين نظامين تعليميين متميزين يلبيان احتياجات وطموحات جميع الطلاب. 
+                    اختر المسار الذي يناسب قدراتك وطموحاتك المستقبلية.
+                </p>
+            </div>
+
+            <!-- التبويبات -->
+            <div class="systems-tabs">
+                <button class="system-tab active" data-system="jordanian" id="tab-jordanian">النظام الأردني</button>
+                <button class="system-tab" data-system="british" id="tab-british">النظام البريطاني</button>
+                <button class="system-tab" data-system="comparison" id="tab-comparison">مقارنة بين النظامين</button>
+            </div>
+
+            <!-- النظام الأردني -->
+            <div class="system-content active" id="jordanian-system">
+                <div class="system-overview">
+                    <h3 id="jordanian-title">النظام الأردني</h3>
+                    <p id="jordanian-desc">
+                        منهاج وزارة التربية والتعليم الأردنية المطور، يغطي جميع المراحل التعليمية من الصف الأول حتى الثاني عشر، 
+                        مع التركيز على الهوية العربية والإسلامية والانتماء الوطني. يتميز المنهاج بتكامله وتدرجه المنطقي 
+                        الذي يبني المعرفة بشكل تراكمي.
+                    </p>
+                </div>
+
+                <div class="curriculum-grid">
+                    <div class="grade-level">
+                        <h4 id="grade-elementary">المرحلة الأساسية الدنيا (الصفوف 1-5)</h4>
+                        <ul class="subjects-list">
+                            <li id="subject-arabic">اللغة العربية</li>
+                            <li id="subject-math">الرياضيات</li>
+                            <li id="subject-science">العلوم</li>
+                            <li id="subject-english">اللغة الإنجليزية</li>
+                            <li id="subject-islamic">التربية الإسلامية</li>
+                            <li id="subject-social">الدراسات الاجتماعية</li>
+                            <li id="subject-art">التربية الفنية</li>
+                            <li id="subject-pe">التربية الرياضية</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-level">
+                        <h4 id="grade-middle">المرحلة الأساسية العليا (الصفوف 6-8)</h4>
+                        <ul class="subjects-list">
+                            <li id="subject-arabic2">اللغة العربية</li>
+                            <li id="subject-math2">الرياضيات</li>
+                            <li id="subject-science2">العلوم</li>
+                            <li id="subject-english2">اللغة الإنجليزية</li>
+                            <li id="subject-islamic2">التربية الإسلامية</li>
+                            <li id="subject-history">التاريخ</li>
+                            <li id="subject-geography">الجغرافيا</li>
+                            <li id="subject-national">التربية الوطنية</li>
+                            <li id="subject-digital">المهارات الرقمية</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-level">
+                        <h4 id="grade-high">المرحلة الثانوية (الصفوف 9-12)</h4>
+                        <ul class="subjects-list">
+                            <li id="subject-arabic3">اللغة العربية</li>
+                            <li id="subject-math3">الرياضيات</li>
+                            <li id="subject-physics">الفيزياء</li>
+                            <li id="subject-chemistry">الكيمياء</li>
+                            <li id="subject-biology">الأحياء</li>
+                            <li id="subject-earth">علوم الأرض</li>
+                            <li id="subject-english3">اللغة الإنجليزية</li>
+                            <li id="subject-islamic3">التربية الإسلامية</li>
+                            <li id="subject-history2">التاريخ</li>
+                            <li id="subject-finance">الثقافة المالية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- النظام البريطاني -->
+            <div class="system-content" id="british-system">
+                <div class="system-overview">
+                    <h3 id="british-title">النظام البريطاني - بيرسون</h3>
+                    <p id="british-desc">
+                        نظام تعليمي دولي معتمد من بيرسون البريطانية، يقدم للطلاب من الصف العاشر حتى الثاني عشر، 
+                        مع مناهج متطورة تواكب أحدث التطورات العالمية في التعليم. يتميز النظام بمرونته 
+                        وتركيزه على التطبيقات العملية والمهارات الحياتية.
+                    </p>
+                </div>
+
+                <div class="curriculum-grid">
+                    <div class="grade-level">
+                        <h4 id="british-advantages-title">مزايا النظام البريطاني</h4>
+                        <ul class="subjects-list">
+                            <li id="advantage1">شهادات دولية معتمدة</li>
+                            <li id="advantage2">طرق تدريس حديثة</li>
+                            <li id="advantage3">فصول صغيرة</li>
+                            <li id="advantage4">دمج التكنولوجيا</li>
+                            <li id="advantage5">مهارات عملية</li>
+                            <li id="advantage6">اعتراف عالمي</li>
+                        </ul>
+                    </div>
+
+                    <div class="grade-level">
+                        <h4 id="british-curriculum-title">المناهج الدراسية</h4>
+                        <ul class="subjects-list">
+                            <li id="british-subject1">اللغة العربية</li>
+                            <li id="british-subject2">اللغة الإنجليزية</li>
+                            <li id="british-subject3">التربية الإسلامية</li>
+                            <li id="british-subject4">الرياضيات</li>
+                            <li id="british-subject5">العلوم</li>
+                            <li id="british-subject6">التاريخ والجغرافيا</li>
+                            <li id="british-subject7">مواد التخصص</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- مقارنة بين النظامين -->
+            <div class="system-content" id="comparison-system">
+                <div class="comparison-table">
+                    <h3 id="comparison-title">مقارنة بين النظامين</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="th-feature">الميزة</th>
+                                <th id="th-jordanian">النظام الأردني</th>
+                                <th id="th-british">النظام البريطاني</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="td-certification">الشهادة</td>
+                                <td id="td-jordanian-cert">التوجيهي الأردني</td>
+                                <td id="td-british-cert">بيرسون الدولية</td>
+                            </tr>
+                            <tr>
+                                <td id="td-recognition">الاعتراف</td>
+                                <td id="td-jordanian-recog">محلي وعربي</td>
+                                <td id="td-british-recog">عالمي</td>
+                            </tr>
+                            <tr>
+                                <td id="td-teaching">أسلوب التدريس</td>
+                                <td id="td-jordanian-teach">تقليدي - نظري</td>
+                                <td id="td-british-teach">تفاعلي - تطبيقي</td>
+                            </tr>
+                            <tr>
+                                <td id="td-language">لغة التدريس</td>
+                                <td id="td-jordanian-lang">العربية</td>
+                                <td id="td-british-lang">الإنجليزية</td>
+                            </tr>
+                            <tr>
+                                <td id="td-cost">التكلفة</td>
+                                <td id="td-jordanian-cost">منخفضة</td>
+                                <td id="td-british-cost">مرتفعة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- التخصصات المهنية -->
+            <div class="specializations">
+                <h3 id="specializations-title">التخصصات المهنية</h3>
+                <div class="spec-cards">
+                    <div class="spec-card">
+                        <h4 id="spec-business">إدارة الأعمال</h4>
+                        <p id="spec-business-desc">
+                            تخصص يركز على أساسيات الإدارة، المحاسبة، التسويق، والاقتصاد، 
+                            مع التطبيق العملي في بيئة الأعمال الحديثة وإعداد الطلاب لسوق العمل.
+                        </p>
+                        <div class="spec-features">
+                            <div class="features-grid">
+                                <div class="feature-column">
+                                    <h5 id="spec-subjects-title">المواد الأساسية</h5>
+                                    <ul>
+                                        <li id="spec-business1">مبادئ الأعمال</li>
+                                        <li id="spec-business2">المحاسبة</li>
+                                        <li id="spec-business3">التسويق</li>
+                                        <li id="spec-business4">الاقتصاد</li>
+                                        <li id="spec-business5">الإدارة</li>
+                                        <li id="spec-business6">ريادة الأعمال</li>
+                                    </ul>
+                                </div>
+                                <div class="feature-column">
+                                    <h5 id="spec-career-title">الفرص المهنية</h5>
+                                    <ul>
+                                        <li id="spec-career1">محلل أعمال</li>
+                                        <li id="spec-career2">أخصائي تسويق</li>
+                                        <li id="spec-career3">مدير مشاريع</li>
+                                        <li id="spec-career4">رائد أعمال</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spec-card">
+                        <h4 id="spec-it">تكنولوجيا المعلومات</h4>
+                        <p id="spec-it-desc">
+                            تخصص حديث يغطي أساسيات البرمجة، قواعد البيانات، الشبكات، وأمن المعلومات، 
+                            مع التركيز على التطبيقات العملية والمشاريع التقنية وإعداد الطلاب للثورة الرقمية.
+                        </p>
+                        <div class="spec-features">
+                            <div class="features-grid">
+                                <div class="feature-column">
+                                    <h5 id="spec-it-subjects">المواد الأساسية</h5>
+                                    <ul>
+                                        <li id="spec-it1">البرمجة</li>
+                                        <li id="spec-it2">قواعد البيانات</li>
+                                        <li id="spec-it3">الشبكات</li>
+                                        <li id="spec-it4">تطوير المواقع</li>
+                                        <li id="spec-it5">أمن المعلومات</li>
+                                        <li id="spec-it6">هندسة البرمجيات</li>
+                                    </ul>
+                                </div>
+                                <div class="feature-column">
+                                    <h5 id="spec-it-career">الفرص المهنية</h5>
+                                    <ul>
+                                        <li id="spec-it-career1">مبرمج</li>
+                                        <li id="spec-it-career2">مطوّر مواقع</li>
+                                        <li id="spec-it-career3">مدير أنظمة</li>
+                                        <li id="spec-it-career4">أخصائي أمن</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قسم الدعوة للعمل -->
+            <div class="cta-section">
+                <h2 id="cta-title">اختر النظام الأنسب لمستقبلك</h2>
+                <p id="cta-desc">نحن هنا لمساعدتك في اختيار النظام التعليمي الأنسب لقدراتك وطموحاتك</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary" id="cta-btn1">احصل على استشارة</a>
+                    <a href="contact.html" class="btn btn-secondary" id="cta-btn2">زيارة المدرسة</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h3 id="footer-school-name">مدرسة عائشة أم المؤمنين</h3>
+                            <p id="footer-school-subtitle">الثانوية المختلطة - لواء سحاب</p>
+                        </div>
+                    </div>
+                    <p id="footer-desc">تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/p/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B9%D8%A7%D8%A6%D8%B4%D8%A9-%D8%A3%D9%85-%D8%A7%D9%84%D9%85%D8%A4%D9%85%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%84%D8%B7%D8%A9-%D9%84%D9%88%D8%A7%D8%A1-%D8%B3%D8%AD%D8%A7%D8%A8-100057617641633/?_rdc=1&_rdr#" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-links-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" id="footer-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="footer-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="footer-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="footer-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="footer-contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-contact-title">معلومات التواصل</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="footer-address">سحاب، شارع الستين، الأردن</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@aishaummalmu.edu.jo</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+962 6 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="footer-hours">الأحد - الخميس: 7:00 ص - 2:00 م</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="footer-copyright">&copy; 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // كائن الترجمة يحتوي على النصوص باللغتين العربية والإنجليزية
+        const translations = {
+            ar: {
+                // شريط الأخبار
+                "news1": "وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية",
+                "news2": "افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن",
+                "news3": "إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية",
+                "news4": "وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي",
+                "news5": "زيادة عدد المدارس الحكومية المجهزة بالتقنيات الحديثة في الأردن",
+                "news6": "وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية",
+                "news7": "افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن",
+
+                // إمكانية الوصول
+                "access-small": "نص صغير",
+                "access-medium": "نص متوسط",
+                "access-large": "نص كبير",
+                "access-high": "تباين عالي",
+                "access-normal": "تباين عادي",
+
+                // شريط التنقل
+                "school-name": "مدرسة عائشة أم المؤمنين",
+                "school-subtitle": "الثانوية الشاملة المختلطة - لواء سحاب",
+                "nav-home": "الرئيسية",
+                "nav-about": "عن المدرسة",
+                "nav-academic": "الأنظمة الأكاديمية",
+                "nav-facilities": "المرافق",
+                "nav-contact": "اتصل بنا",
+
+                // رأس الصفحة
+                "page-title": "الأنظمة الأكاديمية",
+                "page-subtitle": "نظامان تعليميان متميزان لإعداد جيل المستقبل",
+
+                // القسم الرئيسي
+                "systems-main-title": "اختر مسارك التعليمي",
+                "systems-description": "نقدم في مدرسة عائشة أم المؤمنين نظامين تعليميين متميزين يلبيان احتياجات وطموحات جميع الطلاب. اختر المسار الذي يناسب قدراتك وطموحاتك المستقبلية.",
+
+                // التبويبات
+                "tab-jordanian": "النظام الأردني",
+                "tab-british": "النظام البريطاني",
+                "tab-comparison": "مقارنة بين النظامين",
+
+                // النظام الأردني
+                "jordanian-title": "النظام الأردني",
+                "jordanian-desc": "منهاج وزارة التربية والتعليم الأردنية المطور، يغطي جميع المراحل التعليمية من الصف الأول حتى الثاني عشر، مع التركيز على الهوية العربية والإسلامية والانتماء الوطني. يتميز المنهاج بتكامله وتدرجه المنطقي الذي يبني المعرفة بشكل تراكمي.",
+                
+                "grade-elementary": "المرحلة الأساسية الدنيا (الصفوف 1-5)",
+                "grade-middle": "المرحلة الأساسية العليا (الصفوف 6-8)",
+                "grade-high": "المرحلة الثانوية (الصفوف 9-12)",
+                
+                "subject-arabic": "اللغة العربية",
+                "subject-math": "الرياضيات",
+                "subject-science": "العلوم",
+                "subject-english": "اللغة الإنجليزية",
+                "subject-islamic": "التربية الإسلامية",
+                "subject-social": "الدراسات الاجتماعية",
+                "subject-art": "التربية الفنية",
+                "subject-pe": "التربية الرياضية",
+                "subject-history": "التاريخ",
+                "subject-geography": "الجغرافيا",
+                "subject-national": "التربية الوطنية",
+                "subject-digital": "المهارات الرقمية",
+                "subject-physics": "الفيزياء",
+                "subject-chemistry": "الكيمياء",
+                "subject-biology": "الأحياء",
+                "subject-earth": "علوم الأرض",
+                "subject-finance": "الثقافة المالية",
+
+                // النظام البريطاني
+                "british-title": "النظام البريطاني - بيرسون",
+                "british-desc": "نظام تعليمي دولي معتمد من بيرسون البريطانية، يقدم للطلاب من الصف العاشر حتى الثاني عشر، مع مناهج متطورة تواكب أحدث التطورات العالمية في التعليم. يتميز النظام بمرونته وتركيزه على التطبيقات العملية والمهارات الحياتية.",
+
+                "british-advantages-title": "مزايا النظام البريطاني",
+                "british-curriculum-title": "المناهج الدراسية",
+
+                "advantage1": "شهادات دولية معتمدة",
+                "advantage2": "طرق تدريس حديثة",
+                "advantage3": "فصول صغيرة",
+                "advantage4": "دمج التكنولوجيا",
+                "advantage5": "مهارات عملية",
+                "advantage6": "اعتراف عالمي",
+
+                "british-subject1": "اللغة العربية",
+                "british-subject2": "اللغة الإنجليزية",
+                "british-subject3": "التربية الإسلامية",
+                "british-subject4": "الرياضيات",
+                "british-subject5": "العلوم",
+                "british-subject6": "التاريخ والجغرافيا",
+                "british-subject7": "مواد التخصص",
+
+                // جدول المقارنة
+                "comparison-title": "مقارنة بين النظامين",
+                "th-feature": "الميزة",
+                "th-jordanian": "النظام الأردني",
+                "th-british": "النظام البريطاني",
+
+                "td-certification": "الشهادة",
+                "td-jordanian-cert": "التوجيهي الأردني",
+                "td-british-cert": "بيرسون الدولية",
+
+                "td-recognition": "الاعتراف",
+                "td-jordanian-recog": "محلي وعربي",
+                "td-british-recog": "عالمي",
+
+                "td-teaching": "أسلوب التدريس",
+                "td-jordanian-teach": "تقليدي - نظري",
+                "td-british-teach": "تفاعلي - تطبيقي",
+
+                "td-language": "لغة التدريس",
+                "td-jordanian-lang": "العربية",
+                "td-british-lang": "الإنجليزية",
+
+                "td-cost": "التكلفة",
+                "td-jordanian-cost": "منخفضة",
+                "td-british-cost": "مرتفعة",
+
+                // التخصصات المهنية
+                "specializations-title": "التخصصات المهنية",
+
+                "spec-business": "إدارة الأعمال",
+                "spec-business-desc": "تخصص يركز على أساسيات الإدارة، المحاسبة، التسويق، والاقتصاد، مع التطبيق العملي في بيئة الأعمال الحديثة وإعداد الطلاب لسوق العمل.",
+
+                "spec-subjects-title": "المواد الأساسية",
+                "spec-business1": "مبادئ الأعمال",
+                "spec-business2": "المحاسبة",
+                "spec-business3": "التسويق",
+                "spec-business4": "الاقتصاد",
+                "spec-business5": "الإدارة",
+                "spec-business6": "ريادة الأعمال",
+
+                "spec-career-title": "الفرص المهنية",
+                "spec-career1": "محلل أعمال",
+                "spec-career2": "أخصائي تسويق",
+                "spec-career3": "مدير مشاريع",
+                "spec-career4": "رائد أعمال",
+
+                "spec-it": "تكنولوجيا المعلومات",
+                "spec-it-desc": "تخصص حديث يغطي أساسيات البرمجة، قواعد البيانات، الشبكات، وأمن المعلومات، مع التركيز على التطبيقات العملية والمشاريع التقنية وإعداد الطلاب للثورة الرقمية.",
+
+                "spec-it-subjects": "المواد الأساسية",
+                "spec-it1": "البرمجة",
+                "spec-it2": "قواعد البيانات",
+                "spec-it3": "الشبكات",
+                "spec-it4": "تطوير المواقع",
+                "spec-it5": "أمن المعلومات",
+                "spec-it6": "هندسة البرمجيات",
+
+                "spec-it-career": "الفرص المهنية",
+                "spec-it-career1": "مبرمج",
+                "spec-it-career2": "مطوّر مواقع",
+                "spec-it-career3": "مدير أنظمة",
+                "spec-it-career4": "أخصائي أمن",
+
+                // قسم الدعوة
+                "cta-title": "اختر النظام الأنسب لمستقبلك",
+                "cta-desc": "نحن هنا لمساعدتك في اختيار النظام التعليمي الأنسب لقدراتك وطموحاتك",
+                "cta-btn1": "احصل على استشارة",
+                "cta-btn2": "زيارة المدرسة",
+
+                // الفوتر
+                "footer-school-name": "مدرسة عائشة أم المؤمنين",
+                "footer-school-subtitle": "الثانوية المختلطة - لواء سحاب",
+                "footer-desc": "تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل",
+                "footer-links-title": "روابط سريعة",
+                "footer-home": "الرئيسية",
+                "footer-about": "عن المدرسة",
+                "footer-academic": "الأنظمة الأكاديمية",
+                "footer-facilities": "المرافق",
+                "footer-contact": "اتصل بنا",
+                "footer-contact-title": "معلومات التواصل",
+                "footer-address": "سحاب، شارع الستين، الأردن",
+                "footer-hours": "الأحد - الخميس: 7:00 ص - 2:00 م",
+                "footer-copyright": "© 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة."
+            },
+            en: {
+                // شريط الأخبار
+                "news1": "Ministry of Education launches initiative to improve education quality in Jordanian schools",
+                "news2": "Opening training workshops for teachers on digital education in Jordan",
+                "news3": "Launching a new educational platform to support students in various Jordanian governorates",
+                "news4": "Ministry of Education issues report on school performance in Jordan for current academic year",
+                "news5": "Increase in number of government schools equipped with modern technologies in Jordan",
+                "news6": "Ministry of Education launches initiative to improve education quality in Jordanian schools",
+                "news7": "Opening training workshops for teachers on digital education in Jordan",
+
+                // إمكانية الوصول
+                "access-small": "Small text",
+                "access-medium": "Medium text",
+                "access-large": "Large text",
+                "access-high": "High contrast",
+                "access-normal": "Normal contrast",
+
+                // شريط التنقل
+                "school-name": "Aisha Umm al-Mu'minin School",
+                "school-subtitle": "Comprehensive Co-educational Secondary - Sahab District",
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-academic": "Academic Systems",
+                "nav-facilities": "Facilities",
+                "nav-contact": "Contact Us",
+
+                // رأس الصفحة
+                "page-title": "Academic Systems",
+                "page-subtitle": "Two distinguished educational systems to prepare the future generation",
+
+                // القسم الرئيسي
+                "systems-main-title": "Choose Your Educational Path",
+                "systems-description": "We offer at Aisha Umm al-Mu'minin School two distinguished educational systems that meet the needs and aspirations of all students. Choose the path that suits your abilities and future ambitions.",
+
+                // التبويبات
+                "tab-jordanian": "Jordanian System",
+                "tab-british": "British System",
+                "tab-comparison": "System Comparison",
+
+                // النظام الأردني
+                "jordanian-title": "Jordanian System",
+                "jordanian-desc": "The developed curriculum of the Jordanian Ministry of Education, covering all educational stages from first to twelfth grade, with focus on Arab and Islamic identity and national belonging. The curriculum is characterized by its integration and logical progression that builds knowledge cumulatively.",
+                
+                "grade-elementary": "Elementary Stage (Grades 1-5)",
+                "grade-middle": "Middle Stage (Grades 6-8)",
+                "grade-high": "High School Stage (Grades 9-12)",
+                
+                "subject-arabic": "Arabic Language",
+                "subject-math": "Mathematics",
+                "subject-science": "Science",
+                "subject-english": "English Language",
+                "subject-islamic": "Islamic Education",
+                "subject-social": "Social Studies",
+                "subject-art": "Art Education",
+                "subject-pe": "Physical Education",
+                "subject-history": "History",
+                "subject-geography": "Geography",
+                "subject-national": "National Education",
+                "subject-digital": "Digital Skills",
+                "subject-physics": "Physics",
+                "subject-chemistry": "Chemistry",
+                "subject-biology": "Biology",
+                "subject-earth": "Earth Science",
+                "subject-finance": "Financial Culture",
+
+                // النظام البريطاني
+                "british-title": "British System - Pearson",
+                "british-desc": "An international educational system certified by British Pearson, offered to students from tenth to twelfth grade, with advanced curricula that keep pace with the latest global developments in education. The system is characterized by its flexibility and focus on practical applications and life skills.",
+
+                "british-advantages-title": "British System Advantages",
+                "british-curriculum-title": "Curriculum",
+
+                "advantage1": "Internationally certified certificates",
+                "advantage2": "Modern teaching methods",
+                "advantage3": "Small classes",
+                "advantage4": "Technology integration",
+                "advantage5": "Practical skills",
+                "advantage6": "Global recognition",
+
+                "british-subject1": "Arabic Language",
+                "british-subject2": "English Language",
+                "british-subject3": "Islamic Education",
+                "british-subject4": "Mathematics",
+                "british-subject5": "Science",
+                "british-subject6": "History and Geography",
+                "british-subject7": "Specialization Subjects",
+
+                // جدول المقارنة
+                "comparison-title": "System Comparison",
+                "th-feature": "Feature",
+                "th-jordanian": "Jordanian System",
+                "th-british": "British System",
+
+                "td-certification": "Certification",
+                "td-jordanian-cert": "Jordanian Tawjihi",
+                "td-british-cert": "Pearson International",
+
+                "td-recognition": "Recognition",
+                "td-jordanian-recog": "Local and Arab",
+                "td-british-recog": "Global",
+
+                "td-teaching": "Teaching Method",
+                "td-jordanian-teach": "Traditional - Theoretical",
+                "td-british-teach": "Interactive - Practical",
+
+                "td-language": "Teaching Language",
+                "td-jordanian-lang": "Arabic",
+                "td-british-lang": "English",
+
+                "td-cost": "Cost",
+                "td-jordanian-cost": "Low",
+                "td-british-cost": "High",
+
+                // التخصصات المهنية
+                "specializations-title": "Professional Specializations",
+
+                "spec-business": "Business Management",
+                "spec-business-desc": "A specialization focusing on management fundamentals, accounting, marketing, and economics, with practical application in modern business environment and preparing students for the job market.",
+
+                "spec-subjects-title": "Core Subjects",
+                "spec-business1": "Business Principles",
+                "spec-business2": "Accounting",
+                "spec-business3": "Marketing",
+                "spec-business4": "Economics",
+                "spec-business5": "Management",
+                "spec-business6": "Entrepreneurship",
+
+                "spec-career-title": "Career Opportunities",
+                "spec-career1": "Business Analyst",
+                "spec-career2": "Marketing Specialist",
+                "spec-career3": "Project Manager",
+                "spec-career4": "Entrepreneur",
+
+                "spec-it": "Information Technology",
+                "spec-it-desc": "A modern specialization covering programming fundamentals, databases, networks, and information security, with focus on practical applications and technical projects preparing students for the digital revolution.",
+
+                "spec-it-subjects": "Core Subjects",
+                "spec-it1": "Programming",
+                "spec-it2": "Databases",
+                "spec-it3": "Networking",
+                "spec-it4": "Web Development",
+                "spec-it5": "Cybersecurity",
+                "spec-it6": "Software Engineering",
+
+                "spec-it-career": "Career Opportunities",
+                "spec-it-career1": "Programmer",
+                "spec-it-career2": "Web Developer",
+                "spec-it-career3": "System Administrator",
+                "spec-it-career4": "Security Specialist",
+
+                // قسم الدعوة
+                "cta-title": "Choose the Right System for Your Future",
+                "cta-desc": "We are here to help you choose the educational system that best suits your abilities and ambitions",
+                "cta-btn1": "Get Consultation",
+                "cta-btn2": "Visit School",
+
+                // الفوتر
+                "footer-school-name": "Aisha Umm al-Mu'minin School",
+                "footer-school-subtitle": "Co-educational Secondary - Sahab District",
+                "footer-desc": "Distinguished education and supportive educational environment to prepare the future generation",
+                "footer-links-title": "Quick Links",
+                "footer-home": "Home",
+                "footer-about": "About Us",
+                "footer-academic": "Academic Systems",
+                "footer-facilities": "Facilities",
+                "footer-contact": "Contact Us",
+                "footer-contact-title": "Contact Information",
+                "footer-address": "Sahab, Al-Siteen Street, Jordan",
+                "footer-hours": "Sunday - Thursday: 7:00 AM - 2:00 PM",
+                "footer-copyright": "© 2024 Aisha Umm al-Mu'minin School. All rights reserved."
+            }
+        };
+
+        // اللغة الحالية
+        let currentLang = 'ar';
+
+        // دالة تبديل اللغة
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateTexts();
+        }
+
+        // دالة تحديث النصوص
+        function updateTexts() {
+            // تحديث جميع النصوص بناءً على اللغة الحالية
+            Object.keys(translations[currentLang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // نظام التبويب للأنظمة التعليمية
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.system-tab');
+            const contents = document.querySelectorAll('.system-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // إزالة النشاط من جميع الأزرار والمحتويات
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // إضافة النشاط للزر المختار
+                    tab.classList.add('active');
+                    
+                    // إظهار المحتوى المناسب
+                    const systemId = tab.getAttribute('data-system');
+                    document.getElementById(systemId + '-system').classList.add('active');
+                });
+            });
+
+            // تهيئة النصوص
+            updateTexts();
+        });
+
+        // وظائف إمكانية الوصول
+        function toggleAccessibility() {
+            const dropdown = document.getElementById('accessibilityDropdown');
+            dropdown.style.display = (dropdown.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function changeFontSize(size) {
+            // إزالة جميع فئات حجم الخط
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            
+            // إضافة الفئة المطلوبة
+            document.body.classList.add(`font-${size}`);
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        function changeContrast(type) {
+            // إزالة جميع فئات التباين
+            document.body.classList.remove('contrast-high', 'contrast-normal');
+            
+            // إضافة الفئة المطلوبة
+            if (type === 'high') {
+                document.body.classList.add('contrast-high');
+            } else {
+                document.body.classList.add('contrast-normal');
+            }
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        // وظيفة القائمة المتنقلة
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="icon" type="image/png" href="lif (1).png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عن المدرسة - مدرسة عائشة أم المؤمنين</title>
+    <meta name="description" content="تعرف على مدرسة عائشة أم المؤمنين، تاريخها، رؤيتها، وكادرها التعليمي المتميز">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+   .main-nav {
+            background: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .language-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        :root {
+            --primary: #2c5530;
+            --secondary: #4a7c59;
+            --accent: #c48e5f;
+            --light: #f8f9fa;
+            --dark: #2d3e36;
+            --neutral: #6c757d;
+            --success: #7aa893;
+            --warning: #e6c57a;
+            --danger: #d97706;
+            --gradient: linear-gradient(135deg, #2c5530, #4a7c59);
+            --gradient-light: linear-gradient(135deg, #4a7c59, #c48e5f);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: font-size 0.3s ease, filter 0.3s ease;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            font-size: 16px;
+        }
+
+        /* أحجام الخطوط المختلفة */
+        body.font-small {
+            font-size: 14px;
+        }
+
+        body.font-medium {
+            font-size: 16px;
+        }
+
+        body.font-large {
+            font-size: 18px;
+        }
+
+        /* التباين العالي */
+        body.contrast-high {
+            --primary: #000000;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #000000;
+            --accent: #ff6600;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.contrast-high * {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border-color: #000000 !important;
+        }
+
+        body.contrast-high .btn,
+        body.contrast-high .stat-icon,
+        body.contrast-high .feature-icon,
+        body.contrast-high .system-icon {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 2px solid #000000 !important;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* شريط الأخبار */
+        .news-bar {
+            background-color: var(--primary);
+            color: #fff;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-wrapper {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 60s linear infinite;
+        }
+
+        .news-wrapper a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 50px;
+            font-size: 14px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* زر إمكانية الوصول */
+        .accessibility-side {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .accessibility-btn {
+            background-color: var(--primary);
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .accessibility-btn:hover {
+            transform: scale(1.1);
+            background-color: var(--secondary);
+        }
+
+        .accessibility-dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            min-width: 180px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+        }
+
+        .accessibility-dropdown a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .accessibility-dropdown a:hover {
+            background-color: #eee;
+        }
+
+        /* Header بدون فراغ */
+        .header {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 0;
+        }
+
+        .main-nav {
+            background: var(--primary);
+            padding: 15px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .language-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .page-header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-header-content p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* تحسينات إضافية للصفحة */
+        .school-intro {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .intro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .intro-icon {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: var(--primary);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .intro-icon i {
+            font-size: 10rem;
+            opacity: 0.8;
+        }
+
+        .vision-mission-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--neutral);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .vm-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .vm-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .vm-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .vm-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .vm-card p {
+            color: var(--dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        /* قسم التاريخ المعدل */
+        .history-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .history-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .history-intro {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0 20px;
+        }
+
+        .achievements-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            border-right: 4px solid var(--primary);
+        }
+
+        .achievement-item:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: white;
+        }
+
+        .achievement-icon {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        .achievement-text {
+            flex: 1;
+        }
+
+        .achievement-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--dark);
+            margin: 0;
+        }
+
+        .achievement-year {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* قسم الكادر الإداري - مصغر */
+        .admin-staff {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .staff-card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 3px solid var(--primary);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .staff-image {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 15px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.2rem;
+        }
+
+        .staff-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .staff-card p {
+            color: var(--neutral);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .staff-description p {
+            color: var(--dark);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .principal-message {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .message-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .principal-info {
+            text-align: center;
+            background: var(--light);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .principal-icon {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--primary);
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .principal-icon i {
+            font-size: 4rem;
+        }
+
+        .principal-details h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .principal-details p {
+            color: var(--neutral);
+            font-size: 1rem;
+        }
+
+        .message-text {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .message-text h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .message-text .message-content-single {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark);
+            text-align: justify;
+        }
+
+        .achievements-section {
+            padding: 80px 0;
+            background: var(--light);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .achievement-card p {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* تحسين الأزرار العامة */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(67, 94, 70, 0.3);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* تحسين الفوتر */
+        .footer {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links li a {
+            color: rgba(255,255,255,0.8);
+            transition: color 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links li a:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        .contact-item {
+            color: rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* تأثيرات الحركة */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تحسينات للعرض على الجوال */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .intro-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .message-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .page-header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .page-header-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header p {
+                font-size: 1rem;
+            }
+            
+            .vm-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .achievement-icon {
+                margin-left: 0;
+                margin-bottom: 15px;
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body class="font-medium">
+    <!-- شريط الأخبار -->
+    <div class="news-bar">
+        <div class="news-wrapper">
+            <a href="#">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+            <a href="#">إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية</a>
+            <a href="#">وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي</a>
+            <a href="#">زيادة عدد المدارس الحكومية المجهزة بالتقنيات الحديثة في الأردن</a>
+            <a href="#">تطبيق نظام التعليم المدمج في المدارس الأردنية ابتداءً من الفصل القادم</a>
+            <a href="#">برنامج لتطوير مهارات الطلاب في مجالات العلوم والتكنولوجيا</a>
+            <a href="#">تعليم عن بعد: منصة جديدة تتيح للطلاب متابعة الدروس بسهولة</a>
+            <a href="#">إقامة مؤتمرات تعليمية دورية لدعم المعلمين والمدارس</a>
+            <a href="#">وزارة التعليم تعلن عن منح دراسية جديدة للطلاب المتفوقين</a>
+            <!-- تكرار لضمان استمرار الحركة -->
+            <a href="#">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h1 id="school-name">مدرسة عائشة أم المؤمنين</h1>
+                            <p id="school-subtitle">الثانوية الشاملة المختلطة - لواء سحاب</p>
+                        </div>
+                    </a>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                        <li><a href="about.html" class="active" id="nav-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="nav-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="nav-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="nav-contact">اتصل بنا</a></li>
+                        <li>
+                            <button class="language-btn" onclick="toggleLanguage()" title="تغيير اللغة">
+                                <i class="fas fa-language"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- زر إمكانية الوصول -->
+    <div class="accessibility-side">
+        <button class="accessibility-btn" title="إمكانية الوصول" onclick="toggleAccessibility()">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-dropdown" id="accessibilityDropdown">
+            <a href="#" onclick="changeFontSize('small')"><i class="fas fa-text-height"></i> <span id="access-small">نص صغير</span></a>
+            <a href="#" onclick="changeFontSize('medium')"><i class="fas fa-text-height"></i> <span id="access-medium">نص متوسط</span></a>
+            <a href="#" onclick="changeFontSize('large')"><i class="fas fa-text-height"></i> <span id="access-large">نص كبير</span></a>
+            <a href="#" onclick="changeContrast('high')"><i class="fas fa-adjust"></i> <span id="access-high">تباين عالي</span></a>
+            <a href="#" onclick="changeContrast('normal')"><i class="fas fa-adjust"></i> <span id="access-normal">تباين عادي</span></a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 id="page-title">عن المدرسة</h1>
+                <p id="page-subtitle">تعرف على تاريخنا ورؤيتنا ورسالتنا التعليمية</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Introduction -->
+    <section class="school-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2 id="welcome-title">مرحباً بكم في مدرسة عائشة أم المؤمنين</h2>
+                    <p id="school-intro-text">
+                        تأسست مدرسة عائشة أم المؤمنين الثانوية المختلطة في لواء سحاب لتكون منارة تعليمية متميزة تجمع بين الأصالة والمعاصرة. 
+                        نحن نؤمن بأن التعليم هو أساس التقدم والتطور، ولذلك نسعى جاهدين لتقديم تعليم متميز يلبي احتياجات طلابنا 
+                        ويعدهم لمواجهة تحديات المستقبل بثقة وكفاءة.
+                    </p>
+                    <p id="school-mission-text">
+                        مدرستنا تضم أكثر من 1000 طالب وطالبة، يدرّسهم كادر تعليمي متميز يضم 60 معلماً ومعلمة بخبرة تزيد عن 20 عاماً 
+                        في مجال التعليم. نقدم نظامين تعليميين: النظام الأردني والنظام البريطاني، لنوفر للطلاب خيارات متنوعة تناسب 
+                        قدراتهم وميولهم المختلفة.
+                    </p>
+                    <a href="academic.html" class="btn btn-primary" id="learn-more-btn">تعرف على أنظمتنا التعليمية</a>
+                </div>
+                <div class="intro-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision, Mission, Values -->
+    <section class="vision-mission-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="our-identity">هويتنا المؤسسية</h2>
+                <p id="identity-subtitle">أسس تعليمية راسخة توجه مسيرتنا التعليمية</p>
+            </div>
+            
+            <div class="vm-grid">
+                <div class="vm-card animate-fade-in">
+                    <div class="vm-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 id="our-vision">رؤيتنا</h3>
+                    <p id="vision-text">
+                        أن نكون مؤسسة تعليمية رائدة تُخرج جيلاً مبدعاً متمسكاً بقيمه الأصيلة 
+                        ومجهزاً بالعلم والمعرفة لمواكبة تحديات المستقبل والمساهمة في بناء المجتمع.
+                    </p>
+                </div>
+
+                <div class="vm-card animate-fade-in">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 id="our-mission">رسالتنا</h3>
+                    <p id="mission-text">
+                        تقديم تعليم نوعي متميز يدمج بين المناهج الوطنية والعالمية، 
+                        مع توفير بيئة محفزة وآمنة تضمن تنمية مهارات الطلبة وصقل شخصياتهم
+                        وإعدادهم ليكونوا قادة المستقبل.
+                    </p>
+                </div>
+
+                <div class="vm-card animate-fade-in">
+                    <div class="vm-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 id="our-values">قيمنا</h3>
+                    <p id="values-text">
+                        نلتزم بالمسؤولية، النزاهة، التعاون، الابتكار، الاحترام المتبادل، 
+                        والتميز الأكاديمي كأساس لعلاقاتنا وتعاملاتنا ومسيرتنا التعليمية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our History -->
+    <section class="history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="our-history">مسيرتنا عبر الزمن</h2>
+                <p id="history-desc">رحلة إنجازات مستمرة منذ تأسيسنا عام 2006</p>
+            </div>
+            
+            <div class="history-intro" id="history-intro-text">
+                مند بدايتنا عام 2006 وحتى اليوم مسيرة مليئة بالإنجازات
+            </div>
+            
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <p><strong id="history-achievement1">الانطلاقة وتأسيس البنية التعليمية الأولى.</strong></p>
+                        <span class="achievement-year" id="history-year1">2006</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <p><strong id="history-achievement2">الحصول على أولى الجوائز التربوية على مستوى المملكة.</strong></p>
+                        <span class="achievement-year" id="history-year2">2015</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <p><strong id="history-achievement3">إطلاق برامج رقمية وتطوير البنية التكنولوجية في التعليم.</strong></p>
+                        <span class="achievement-year" id="history-year3">2020</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <p><strong id="history-achievement4">إضافة المنهاج البريطاني توسعة المدرسة لتشمل النظام التعليمي البريطاني.</strong></p>
+                        <span class="achievement-year" id="history-year4">2023</span>
+                    </div>
+                </div>
+                
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <p><strong id="history-achievement5">التوسع وإضافة مرافق حديثة للأنشطة والرياضة.</strong></p>
+                        <span class="achievement-year" id="history-year5">2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principal's Message -->
+    <section class="principal-message">
+        <div class="container">
+            <div class="message-content">
+                <div class="principal-info">
+                    <div class="principal-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="principal-details">
+                        <h3 id="principal-name">القائدة حنان أبو زيد</h3>
+                        <p id="principal-title">مديرة المدرسة</p>
+                    </div>
+                </div>
+                <div class="message-text">
+                    <h2 id="principal-message-title">كلمة مديرة المدرسة</h2>
+                    <div class="message-content-single">
+                        <p id="principal-message-full">
+                            "يسعدني أن أرحب بكم في مدرسة عائشة أم المؤمنين الثانوية المختلطة، مؤسستنا التعليمية التي تسعى لتقديم أفضل ما في التعليم مع الحفاظ على قيمنا الإسلامية الأصيلة. نحن نؤمن بأن كل طالب وطالبة يمتلكون قدرات فريدة، وواجبنا هو اكتشاف هذه القدرات وتنميتها. نعمل بجد لتوفير بيئة تعليمية محفزة وآمنة، حيث يتحقق التميز الأكاديمي جنباً إلى جنب مع بناء الشخصية المتوازنة. التعليم في نظرنا ليس مجرد نقل للمعلومات، بل هو بناء للشخصية وإعداد للمستقبل. نحن نسعى لخلق بيئة تعليمية محفزة ومبدعة، تجمع بين التقاليد الأصيلة والمناهج الحديثة، لنعد أجيالاً قادرة على مواجهة تحديات القرن الحادي والعشرين بثقة وكفاءة. أؤمن بأن الشراكة بين المدرسة والأسرة هي أساس نجاح العملية التعليمية. معاً نستطيع أن نحقق أهدافنا في تربية وتعليم أبنائنا ليكونوا قادة المستقبل."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Administrative Staff -->
+    <section class="admin-staff">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="admin-team">الكادر الإداري</h2>
+                <p id="admin-desc">فريق إداري متميز يعمل على توفير بيئة تعليمية مثالية</p>
+            </div>
+            
+            <div class="staff-grid">
+                <div class="staff-card animate-fade-in">
+                    <div class="staff-image">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 id="principal-name-staff">حنان أبو زيد</h3>
+                    <p id="principal-title-staff">مديرة المدرسة</p>
+                    <div class="staff-description">
+                        <p id="principal-desc">خبرة واسعة في القيادة التربوية والإدارة المدرسية</p>
+                    </div>
+                </div>
+                
+                <div class="staff-card animate-fade-in">
+                    <div class="staff-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 id="assistant1-name">أكابر أبو زيد</h3>
+                    <p id="assistant1-title">المساعدة الأولى</p>
+                    <div class="staff-description">
+                        <p id="assistant1-desc">متخصصة في الشؤون الأكاديمية والتطوير التربوي</p>
+                    </div>
+                </div>
+                
+                <div class="staff-card animate-fade-in">
+                    <div class="staff-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 id="assistant2-name">نور الهوادي</h3>
+                    <p id="assistant2-title">المساعدة الثانية</p>
+                    <div class="staff-description">
+                        <p id="assistant2-desc">مسؤولة عن الأنشطة الطلابية والشؤون الإدارية</p>
+                    </div>
+                </div>
+                
+                <div class="staff-card animate-fade-in">
+                    <div class="staff-image">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3 id="counselor-name">سمية الجابر</h3>
+                    <p id="counselor-title">المرشدة التربوية</p>
+                    <div class="staff-description">
+                        <p id="counselor-desc">تقدم الدعم النفسي والإرشاد التربوي للطلاب</p>
+                    </div>
+                </div>
+                
+                <div class="staff-card animate-fade-in">
+                    <div class="staff-image">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3 id="secretary-name">الاء المحارمة</h3>
+                    <p id="secretary-title">السكرتيرة</p>
+                    <div class="staff-description">
+                        <p id="secretary-desc">تدير الشؤون الإدارية والتواصل مع أولياء الأمور</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Achievements -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="our-achievements">إنجازاتنا البارزة</h2>
+                <p id="achievements-desc">محطات فخر وتميز في مسيرتنا التعليمية</p>
+            </div>
+            
+            <div class="achievements-grid">
+                <div class="achievement-card animate-fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 id="academic-excellence">التميز الأكاديمي</h3>
+                    <p id="academic-achievement">معدلات نجاح عالية في الثانوية العامة تتجاوز 95% سنوياً، مع تفوق في الشهادات الدولية.</p>
+                </div>
+                
+                <div class="achievement-card animate-fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 id="competitions">المسابقات العلمية</h3>
+                    <p id="competitions-achievement">مراكز متقدمة في المسابقات العلمية والرياضية على مستوى المملكة والدول العربية.</p>
+                </div>
+                
+                <div class="achievement-card animate-fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 id="recognition">التقدير الرسمي</h3>
+                    <p id="recognition-achievement">تقدير من وزارة التربية والتعليم للأداء المتميز والابتكار في الأساليب التعليمية.</p>
+                </div>
+                
+                <div class="achievement-card animate-fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 id="community-service">خدمة المجتمع</h3>
+                    <p id="community-achievement">مشاريع تطوعية ومبادرات مجتمعية حصلت على تكريم محلي وإقليمي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h3 id="footer-school-name">مدرسة عائشة أم المؤمنين</h3>
+                            <p id="footer-school-subtitle">الثانوية المختلطة - لواء سحاب</p>
+                        </div>
+                    </div>
+                    <p id="footer-desc">تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/p/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B9%D8%A7%D8%A6%D8%B4%D8%A9-%D8%A3%D9%85-%D8%A7%D9%84%D9%85%D8%A4%D9%85%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%84%D8%B7%D8%A9-%D9%84%D9%88%D8%A7%D8%A1-%D8%B3%D8%AD%D8%A7%D8%A8-100057617641633/?_rdc=1&_rdr#" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-links-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" id="footer-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="footer-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="footer-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="footer-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="footer-contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-contact-title">معلومات التواصل</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="footer-address">سحاب، شارع الستين، الأردن</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@aishaummalmu.edu.jo</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+962 6 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="footer-hours">الأحد - الخميس: 7:00 ص - 2:00 م</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="footer-copyright">&copy; 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // كائن الترجمة يحتوي على النصوص باللغتين العربية والإنجليزية
+        const translations = {
+            ar: {
+                // شريط التنقل
+                "school-name": "مدرسة عائشة أم المؤمنين",
+                "school-subtitle": "الثانوية الشاملة المختلطة - لواء سحاب",
+                "nav-home": "الرئيسية",
+                "nav-about": "عن المدرسة",
+                "nav-academic": "الأنظمة الأكاديمية",
+                "nav-facilities": "المرافق",
+                "nav-contact": "اتصل بنا",
+                
+                // صفحة العنوان
+                "page-title": "عن المدرسة",
+                "page-subtitle": "تعرف على تاريخنا ورؤيتنا ورسالتنا التعليمية",
+                
+                // مقدمة المدرسة
+                "welcome-title": "مرحباً بكم في مدرسة عائشة أم المؤمنين",
+                "school-intro-text": "تأسست مدرسة عائشة أم المؤمنين الثانوية المختلطة في لواء سحاب لتكون منارة تعليمية متميزة تجمع بين الأصالة والمعاصرة. نحن نؤمن بأن التعليم هو أساس التقدم والتطور، ولذلك نسعى جاهدين لتقديم تعليم متميز يلبي احتياجات طلابنا ويعدهم لمواجهة تحديات المستقبل بثقة وكفاءة.",
+                "school-mission-text": "مدرستنا تضم أكثر من 1000 طالب وطالبة، يدرّسهم كادر تعليمي متميز يضم 60 معلماً ومعلمة بخبرة تزيد عن 20 عاماً في مجال التعليم. نقدم نظامين تعليميين: النظام الأردني والنظام البريطاني، لنوفر للطلاب خيارات متنوعة تناسب قدراتهم وميولهم المختلفة.",
+                "learn-more-btn": "تعرف على أنظمتنا التعليمية",
+                
+                // الرؤية والرسالة والقيم
+                "our-identity": "هويتنا المؤسسية",
+                "identity-subtitle": "أسس تعليمية راسخة توجه مسيرتنا التعليمية",
+                "our-vision": "رؤيتنا",
+                "vision-text": "أن نكون مؤسسة تعليمية رائدة تُخرج جيلاً مبدعاً متمسكاً بقيمه الأصيلة ومجهزاً بالعلم والمعرفة لمواكبة تحديات المستقبل والمساهمة في بناء المجتمع.",
+                "our-mission": "رسالتنا",
+                "mission-text": "تقديم تعليم نوعي متميز يدمج بين المناهج الوطنية والعالمية، مع توفير بيئة محفزة وآمنة تضمن تنمية مهارات الطلبة وصقل شخصياتهم وإعدادهم ليكونوا قادة المستقبل.",
+                "our-values": "قيمنا",
+                "values-text": "نلتزم بالمسؤولية، النزاهة، التعاون، الابتكار، الاحترام المتبادل، والتميز الأكاديمي كأساس لعلاقاتنا وتعاملاتنا ومسيرتنا التعليمية.",
+                
+                // التاريخ
+                "our-history": "مسيرتنا عبر الزمن",
+                "history-desc": "رحلة إنجازات مستمرة منذ تأسيسنا عام 2006",
+                "history-intro-text": "مند بدايتنا عام 2006 وحتى اليوم مسيرة مليئة بالإنجازات",
+                "history-achievement1": "الانطلاقة وتأسيس البنية التعليمية الأولى.",
+                "history-year1": "2006",
+                "history-achievement2": "الحصول على أولى الجوائز التربوية على مستوى المملكة.",
+                "history-year2": "2015",
+                "history-achievement3": "إطلاق برامج رقمية وتطوير البنية التكنولوجية في التعليم.",
+                "history-year3": "2020",
+                "history-achievement4": "إضافة المنهاج البريطاني توسعة المدرسة لتشمل النظام التعليمي البريطاني.",
+                "history-year4": "2023",
+                "history-achievement5": "التوسع وإضافة مرافق حديثة للأنشطة والرياضة.",
+                "history-year5": "2025",
+                
+                // كلمة المديرة
+                "principal-name": "القائدة حنان أبو زيد",
+                "principal-title": "مديرة المدرسة",
+                "principal-message-title": "كلمة مديرة المدرسة",
+                "principal-message-full": "\"يسعدني أن أرحب بكم في مدرسة عائشة أم المؤمنين الثانوية المختلطة، مؤسستنا التعليمية التي تسعى لتقديم أفضل ما في التعليم مع الحفاظ على قيمنا الإسلامية الأصيلة. نحن نؤمن بأن كل طالب وطالبة يمتلكون قدرات فريدة، وواجبنا هو اكتشاف هذه القدرات وتنميتها. نعمل بجد لتوفير بيئة تعليمية محفزة وآمنة، حيث يتحقق التميز الأكاديمي جنباً إلى جنب مع بناء الشخصية المتوازنة. التعليم في نظرنا ليس مجرد نقل للمعلومات، بل هو بناء للشخصية وإعداد للمستقبل. نحن نسعى لخلق بيئة تعليمية محفزة ومبدعة، تجمع بين التقاليد الأصيلة والمناهج الحديثة، لنعد أجيالاً قادرة على مواجهة تحديات القرن الحادي والعشرين بثقة وكفاءة. أؤمن بأن الشراكة بين المدرسة والأسرة هي أساس نجاح العملية التعليمية. معاً نستطيع أن نحقق أهدافنا في تربية وتعليم أبنائنا ليكونوا قادة المستقبل.\"",
+                
+                // الكادر الإداري
+                "admin-team": "الكادر الإداري",
+                "admin-desc": "فريق إداري متميز يعمل على توفير بيئة تعليمية مثالية",
+                "principal-name-staff": "حنان أبو زيد",
+                "principal-title-staff": "مديرة المدرسة",
+                "principal-desc": "خبرة واسعة في القيادة التربوية والإدارة المدرسية",
+                "assistant1-name": "أكابر أبو زيد",
+                "assistant1-title": "المساعدة الأولى",
+                "assistant1-desc": "متخصصة في الشؤون الأكاديمية والتطوير التربوي",
+                "assistant2-name": "نور الهوادي",
+                "assistant2-title": "المساعدة الثانية",
+                "assistant2-desc": "مسؤولة عن الأنشطة الطلابية والشؤون الإدارية",
+                "counselor-name": "سمية الجابر",
+                "counselor-title": "المرشدة التربوية",
+                "counselor-desc": "تقدم الدعم النفسي والإرشاد التربوي للطلاب",
+                "secretary-name": "الاء المحارمة",
+                "secretary-title": "السكرتيرة",
+                "secretary-desc": "تدير الشؤون الإدارية والتواصل مع أولياء الأمور",
+                
+                // الإنجازات
+                "our-achievements": "إنجازاتنا البارزة",
+                "achievements-desc": "محطات فخر وتميز في مسيرتنا التعليمية",
+                "academic-excellence": "التميز الأكاديمي",
+                "academic-achievement": "معدلات نجاح عالية في الثانوية العامة تتجاوز 95% سنوياً، مع تفوق في الشهادات الدولية.",
+                "competitions": "المسابقات العلمية",
+                "competitions-achievement": "مراكز متقدمة في المسابقات العلمية والرياضية على مستوى المملكة والدول العربية.",
+                "recognition": "التقدير الرسمي",
+                "recognition-achievement": "تقدير من وزارة التربية والتعليم للأداء المتميز والابتكار في الأساليب التعليمية.",
+                "community-service": "خدمة المجتمع",
+                "community-achievement": "مشاريع تطوعية ومبادرات مجتمعية حصلت على تكريم محلي وإقليمي.",
+                
+                // إمكانية الوصول
+                "access-small": "نص صغير",
+                "access-medium": "نص متوسط",
+                "access-large": "نص كبير",
+                "access-high": "تباين عالي",
+                "access-normal": "تباين عادي",
+                
+                // الفوتر
+                "footer-school-name": "مدرسة عائشة أم المؤمنين",
+                "footer-school-subtitle": "الثانوية المختلطة - لواء سحاب",
+                "footer-desc": "تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل",
+                "footer-links-title": "روابط سريعة",
+                "footer-home": "الرئيسية",
+                "footer-about": "عن المدرسة",
+                "footer-academic": "الأنظمة الأكاديمية",
+                "footer-facilities": "المرافق",
+                "footer-contact": "اتصل بنا",
+                "footer-contact-title": "معلومات التواصل",
+                "footer-address": "سحاب، شارع الستين، الأردن",
+                "footer-hours": "الأحد - الخميس: 7:00 ص - 2:00 م",
+                "footer-copyright": "© 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة."
+            },
+            en: {
+                // شريط التنقل
+                "school-name": "Aisha Umm al-Mu'minin School",
+                "school-subtitle": "Comprehensive Co-educational Secondary - Sahab District",
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-academic": "Academic Systems",
+                "nav-facilities": "Facilities",
+                "nav-contact": "Contact Us",
+                
+                // صفحة العنوان
+                "page-title": "About the School",
+                "page-subtitle": "Learn about our history, vision, and educational mission",
+                
+                // مقدمة المدرسة
+                "welcome-title": "Welcome to Aisha Umm al-Mu'minin School",
+                "school-intro-text": "Aisha Umm al-Mu'minin Secondary Mixed School was established in Sahab District to be a distinguished educational beacon that combines authenticity and modernity. We believe that education is the foundation of progress and development, and therefore we strive to provide distinguished education that meets the needs of our students and prepares them to face future challenges with confidence and efficiency.",
+                "school-mission-text": "Our school includes more than 1000 male and female students, taught by a distinguished teaching staff of 60 male and female teachers with more than 20 years of experience in the field of education. We offer two educational systems: the Jordanian system and the British system, to provide students with diverse options that suit their different abilities and inclinations.",
+                "learn-more-btn": "Learn about our educational systems",
+                
+                // الرؤية والرسالة والقيم
+                "our-identity": "Our Institutional Identity",
+                "identity-subtitle": "Solid educational foundations that guide our educational journey",
+                "our-vision": "Our Vision",
+                "vision-text": "To be a leading educational institution that graduates a creative generation adhering to its authentic values and equipped with science and knowledge to keep pace with future challenges and contribute to building society.",
+                "our-mission": "Our Mission",
+                "mission-text": "Providing distinguished quality education that integrates national and international curricula, while providing a stimulating and safe environment that ensures the development of students' skills, refining their personalities, and preparing them to be future leaders.",
+                "our-values": "Our Values",
+                "values-text": "We are committed to responsibility, integrity, cooperation, innovation, mutual respect, and academic excellence as the basis for our relationships, dealings, and educational journey.",
+                
+                // التاريخ
+                "our-history": "Our Journey Through Time",
+                "history-desc": "A continuous journey of achievements since our establishment in 2006",
+                "history-intro-text": "From our beginning in 2006 until today, a journey full of achievements",
+                "history-achievement1": "Launch and establishment of the first educational structure.",
+                "history-year1": "2006",
+                "history-achievement2": "Obtaining the first educational awards at the kingdom level.",
+                "history-year2": "2015",
+                "history-achievement3": "Launching digital programs and developing technological infrastructure in education.",
+                "history-year3": "2020",
+                "history-achievement4": "Adding the British curriculum and expanding the school to include the British educational system.",
+                "history-year4": "2023",
+                "history-achievement5": "Expansion and addition of modern facilities for activities and sports.",
+                "history-year5": "2025",
+                
+                // كلمة المديرة
+                "principal-name": "Principal Hanan Abu Zaid",
+                "principal-title": "School Principal",
+                "principal-message-title": "Principal's Message",
+                "principal-message-full": "\"I am pleased to welcome you to Aisha Umm al-Mu'minin Secondary Mixed School, our educational institution that strives to provide the best in education while preserving our authentic Islamic values. We believe that every male and female student possesses unique abilities, and our duty is to discover and develop these abilities. We work hard to provide a stimulating and safe educational environment, where academic excellence is achieved alongside building a balanced personality. Education in our view is not just about transferring information, but about building character and preparing for the future. We strive to create a stimulating and creative educational environment that combines authentic traditions and modern curricula, to prepare generations capable of facing the challenges of the twenty-first century with confidence and efficiency. I believe that the partnership between the school and the family is the foundation of the success of the educational process. Together we can achieve our goals in raising and educating our children to be future leaders.\"",
+                
+                // الكادر الإداري
+                "admin-team": "Administrative Staff",
+                "admin-desc": "A distinguished administrative team working to provide an ideal educational environment",
+                "principal-name-staff": "Hanan Abu Zaid",
+                "principal-title-staff": "School Principal",
+                "principal-desc": "Extensive experience in educational leadership and school administration",
+                "assistant1-name": "Akaber Abu Zaid",
+                "assistant1-title": "First Assistant",
+                "assistant1-desc": "Specialized in academic affairs and educational development",
+                "assistant2-name": "Nour Al-Hawadi",
+                "assistant2-title": "Second Assistant",
+                "assistant2-desc": "Responsible for student activities and administrative affairs",
+                "counselor-name": "Sumaya Al-Jaber",
+                "counselor-title": "Educational Counselor",
+                "counselor-desc": "Provides psychological support and educational guidance to students",
+                "secretary-name": "Alaa Al-Maharma",
+                "secretary-title": "Secretary",
+                "secretary-desc": "Manages administrative affairs and communication with parents",
+                
+                // الإنجازات
+                "our-achievements": "Our Notable Achievements",
+                "achievements-desc": "Proud and distinguished milestones in our educational journey",
+                "academic-excellence": "Academic Excellence",
+                "academic-achievement": "High success rates in the general secondary examination exceeding 95% annually, with excellence in international certificates.",
+                "competitions": "Scientific Competitions",
+                "competitions-achievement": "Advanced positions in scientific and sports competitions at the kingdom and Arab countries level.",
+                "recognition": "Official Recognition",
+                "recognition-achievement": "Recognition from the Ministry of Education for distinguished performance and innovation in teaching methods.",
+                "community-service": "Community Service",
+                "community-achievement": "Volunteer projects and community initiatives that have received local and regional honors.",
+                
+                // إمكانية الوصول
+                "access-small": "Small text",
+                "access-medium": "Medium text",
+                "access-large": "Large text",
+                "access-high": "High contrast",
+                "access-normal": "Normal contrast",
+                
+                // الفوتر
+                "footer-school-name": "Aisha Umm al-Mu'minin School",
+                "footer-school-subtitle": "Co-educational Secondary - Sahab District",
+                "footer-desc": "Distinguished education and supportive educational environment to prepare the future generation",
+                "footer-links-title": "Quick Links",
+                "footer-home": "Home",
+                "footer-about": "About Us",
+                "footer-academic": "Academic Systems",
+                "footer-facilities": "Facilities",
+                "footer-contact": "Contact Us",
+                "footer-contact-title": "Contact Information",
+                "footer-address": "Sahab, Al-Siteen Street, Jordan",
+                "footer-hours": "Sunday - Thursday: 7:00 AM - 2:00 PM",
+                "footer-copyright": "© 2024 Aisha Umm al-Mu'minin School. All rights reserved."
+            }
+        };
+
+        // اللغة الحالية
+        let currentLang = 'ar';
+
+        // دالة تبديل اللغة
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateTexts();
+        }
+
+        // دالة تحديث النصوص
+        function updateTexts() {
+            // تحديث جميع النصوص بناءً على اللغة الحالية
+            Object.keys(translations[currentLang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // دالة تبديل القائمة المتنقلة
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // فتح/إغلاق قائمة إمكانية الوصول عند النقر فقط
+        function toggleAccessibility() {
+            const dropdown = document.getElementById('accessibilityDropdown');
+            dropdown.style.display = (dropdown.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        // وظائف إمكانية الوصول
+        function changeFontSize(size) {
+            // إزالة جميع فئات حجم الخط
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            
+            // إضافة الفئة المطلوبة
+            document.body.classList.add(`font-${size}`);
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        function changeContrast(type) {
+            // إزالة جميع فئات التباين
+            document.body.classList.remove('contrast-high', 'contrast-normal');
+            
+            // إضافة الفئة المطلوبة
+            if (type === 'high') {
+                document.body.classList.add('contrast-high');
+            } else {
+                document.body.classList.add('contrast-normal');
+            }
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTexts();
+        });
+    </script>
+</body>
+</html>

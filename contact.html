@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+            <link rel="icon" type="image/png" href="lif (1).png" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - مدرسة عائشة أم المؤمنين</title>
+    <meta name="description" content="تواصل مع مدرسة عائشة أم المؤمنين - العنوان، أوقات العمل، ووسائل التواصل">
+    
+    <!-- تحسين أداء تحميل الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5530;
+            --secondary: #4a7c59;
+            --accent: #c48e5f;
+            --light: #f8f9fa;
+            --dark: #2d3e36;
+            --neutral: #6c757d;
+            --success: #7aa893;
+            --warning: #e6c57a;
+            --danger: #d97706;
+            --gradient: linear-gradient(135deg, #2c5530, #4a7c59);
+            --gradient-light: linear-gradient(135deg, #4a7c59, #c48e5f);
+            --light-bg: #f9fbf8;
+            --text-dark: #2d3e36;
+            --text-light: #6c757d;
+            --primary-dark: #1e3a23;
+            --primary-light: #3a6b47;
+            --card-bg: #ffffff;
+            --section-bg: #f9fbf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            transition: font-size 0.3s ease, filter 0.3s ease;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* أحجام الخطوط المختلفة */
+        body.font-small {
+            font-size: 14px;
+        }
+
+        body.font-medium {
+            font-size: 16px;
+        }
+
+        body.font-large {
+            font-size: 18px;
+        }
+
+        /* التباين العالي */
+        body.contrast-high {
+            --primary: #000000;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #000000;
+            --accent: #ff6600;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.contrast-high * {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border-color: #000000 !important;
+        }
+
+        body.contrast-high .btn,
+        body.contrast-high .stat-icon,
+        body.contrast-high .feature-icon,
+        body.contrast-high .system-icon {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 2px solid #000000 !important;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ========== شريط الأخبار المحدث ========== */
+        .news-bar {
+            background-color: var(--primary);
+            color: #fff;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-wrapper {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 60s linear infinite;
+        }
+
+        .news-wrapper a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 50px;
+            font-size: 14px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* ========== زر إمكانية الوصول المحدث ========== */
+        .accessibility-side {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .accessibility-btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .accessibility-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .accessibility-dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            min-width: 180px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+        }
+
+        .accessibility-dropdown a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .accessibility-dropdown a:hover {
+            background-color: #eee;
+        }
+
+        /* ========== الشريط العلوي المحدث ========== */
+        .main-nav {
+            background: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .language-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ========== قسم اتصل بنا ========== */
+        .contact-hero {
+            background: linear-gradient(135deg, rgba(44, 85, 48, 0.9), rgba(74, 124, 89, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .contact-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .contact-info-section {
+            padding: 80px 0;
+            background: var(--section-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover .contact-icon {
+            transform: scale(1.1);
+        }
+
+        .contact-card h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-card p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(44, 85, 48, 0.1);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
+
+        .checkbox-group {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(44, 85, 48, 0.3);
+        }
+
+        .map-section {
+            padding: 80px 0;
+            background: var(--section-bg);
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .location-info {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 300px;
+        }
+
+        .location-info h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .location-info p {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .btn-directions {
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-directions:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .faq-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .faq-item h4 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* ========== التذييل المحدث ========== */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* تأثيرات الحركة */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تحسينات للعرض على الجوال */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .location-info {
+                position: relative;
+                top: auto;
+                left: auto;
+                max-width: 100%;
+                margin: 20px;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="font-medium">
+    <!-- ========== شريط الأخبار المحدث ========== -->
+    <div class="news-bar">
+        <div class="news-wrapper">
+            <a href="#" id="news1">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#" id="news2">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+            <a href="#" id="news3">إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية</a>
+            <a href="#" id="news4">وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي</a>
+            <a href="#" id="news5">زيارة وزير التربية والتعليم لمدرسة عائشة أم المؤمنين</a>
+        </div>
+    </div>
+
+    <!-- ========== زر إمكانية الوصول المحدث ========== -->
+    <div class="accessibility-side">
+        <button class="accessibility-btn" title="إمكانية الوصول" onclick="toggleAccessibility()">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-dropdown" id="accessibilityDropdown">
+            <a href="#" onclick="changeFontSize('small')"><i class="fas fa-text-height"></i> <span id="access-small">نص صغير</span></a>
+            <a href="#" onclick="changeFontSize('medium')"><i class="fas fa-text-height"></i> <span id="access-medium">نص متوسط</span></a>
+            <a href="#" onclick="changeFontSize('large')"><i class="fas fa-text-height"></i> <span id="access-large">نص كبير</span></a>
+            <a href="#" onclick="changeContrast('high')"><i class="fas fa-adjust"></i> <span id="access-high">تباين عالي</span></a>
+            <a href="#" onclick="changeContrast('normal')"><i class="fas fa-adjust"></i> <span id="access-normal">تباين عادي</span></a>
+        </div>
+    </div>
+
+    <!-- ========== الشريط العلوي المحدث ========== -->
+    <header class="header">
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h1 id="school-name">مدرسة عائشة أم المؤمنين</h1>
+                            <p id="school-subtitle">الثانوية الشاملة المختلطة - لواء سحاب</p>
+                        </div>
+                    </a>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="nav-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="nav-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="nav-facilities">المرافق</a></li>
+                        <li><a href="contact.html" class="active" id="nav-contact">اتصل بنا</a></li>
+                        <li>
+                            <button class="language-btn" onclick="toggleLanguage()" title="تغيير اللغة">
+                                <i class="fas fa-language"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 id="contact-hero-title">اتصل بنا</h1>
+            <p id="contact-hero-subtitle">نحن هنا للإجابة على جميع استفساراتكم ومساعدتكم في رحلة تعليم أبنائكم</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card animate-fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 id="contact-location-title">موقعنا</h3>
+                    <p id="contact-location-desc">سحاب، شارع الستين<br>لواء سحاب<br>المملكة الأردنية الهاشمية</p>
+                </div>
+                
+                <div class="contact-card animate-fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 id="contact-email-title">راسلنا</h3>
+                    <p>info@aishaummalmu.edu.jo</p>
+                    <p id="contact-email-desc">نرد على استفساراتكم خلال 24 ساعة</p>
+                </div>
+                
+                <div class="contact-card animate-fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 id="contact-hours-title">أوقات العمل</h3>
+                    <p id="contact-days">الأحد - الخميس</p>
+                    <p id="contact-time">7:00 صباحاً - 2:00 ظهراً</p>
+                    <p id="contact-reception">استقبال أولياء الأمور: 9:00 ص - 1:00 ظ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2 id="form-title">أرسل لنا رسالة</h2>
+                    <p id="form-subtitle">املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" id="first-name-label">الاسم الأول</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" id="last-name-label">الاسم الأخير</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" id="email-label">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" id="phone-label">رقم الهاتف</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" id="subject-label">الموضوع</label>
+                        <select id="subject" name="subject" class="form-control" required>
+                            <option value="" id="select-subject">اختر الموضوع</option>
+                            <option value="inquiry" id="option-inquiry">استفسار عام</option>
+                            <option value="admission" id="option-admission">استفسار عن التسجيل</option>
+                            <option value="academic" id="option-academic">استفسار أكاديمي</option>
+                            <option value="facilities" id="option-facilities">استفسار عن المرافق</option>
+                            <option value="complaint" id="option-complaint">شكوى</option>
+                            <option value="suggestion" id="option-suggestion">اقتراح</option>
+                            <option value="other" id="option-other">أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" id="message-label">رسالتك</label>
+                        <textarea id="message" name="message" class="form-control" rows="6" required placeholder="اكتب رسالتك هنا..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy" id="privacy-label">
+                            أوافق على معالجة بياناتي الشخصية وفقاً لسياسة الخصوصية
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit" id="submit-btn">
+                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="map-title">اعثر علينا</h2>
+                <p id="map-subtitle">موقع مدرسة عائشة أم المؤمنين في لواء سحاب</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.123456789012!2d35.987654321!3d31.87654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDAwJzAwLjAiTiAzNcKwNTknMDAuMCJF!5e0!3m2!1sen!2sjo!4v1234567890123!5m2!1sen!2sjo"
+                    class="map-frame"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="موقع مدرسة عائشة أم المؤمنين">
+                </iframe>
+                <div class="location-info">
+                    <h3 id="location-title">مدرسة عائشة أم المؤمنين</h3>
+                    <p id="location-address">سحاب، شارع الستين<br>لواء سحاب، الأردن</p>
+                    <a href="https://maps.google.com/?q=مدرسة+عائشة+أم+المؤمنين+سحاب" target="_blank" class="btn-directions" id="directions-btn">
+                        <i class="fas fa-directions"></i> احصل على الاتجاهات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="faq-title">أسئلة شائعة</h2>
+                <p id="faq-subtitle">إجابات على أكثر الأسئلة شيوعاً من أولياء الأمور</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item animate-fade-in">
+                    <h4 id="faq-1-title">كيف يمكنني تسجيل ابني/ابنتي في المدرسة؟</h4>
+                    <p id="faq-1-answer">يمكنكم زيارة المدرسة خلال أوقات العمل الرسمية مع إحضار المستندات المطلوبة، أو ملء نموذج الاتصال وسنتواصل معكم لتحديد موعد.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in">
+                    <h4 id="faq-2-title">ما الفرق بين النظام الأردني والبريطاني؟</h4>
+                    <p id="faq-2-answer">النظام الأردني يركز على المنهاج الوطني، بينما البريطاني دولي المعايير. يمكنكم زيارة صفحة الأنظمة الأكاديمية لمقارنة مفصلة.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in">
+                    <h4 id="faq-3-title">هل يمكنني زيارة المدرسة قبل التسجيل؟</h4>
+                    <p id="faq-3-answer">نعم، نرحب بزيارتكم. يرجى حجز موعد مسبق عبر النموذج أعلاه أو الاتصال بنا لتنسيق الزيارة.</p>
+                </div>
+                
+                <div class="faq-item animate-fade-in">
+                    <h4 id="faq-4-title">ما هي الرسوم الدراسية والخدمات المقدمة؟</h4>
+                    <p id="faq-4-answer">تختلف الرسوم حسب النظام التعليمي والمرحلة. يمكنكم التواصل معنا للحصول على تفاصيل شاملة عن الرسوم والخدمات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== التذييل المحدث ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h3 id="footer-school-name">مدرسة عائشة أم المؤمنين</h3>
+                            <p id="footer-school-subtitle">الثانوية المختلطة - لواء سحاب</p>
+                        </div>
+                    </div>
+                    <p id="footer-desc">تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/p/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B9%D8%A7%D8%A6%D8%B4%D8%A9-%D8%A3%D9%85-%D8%A7%D9%84%D9%85%D8%A4%D9%85%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%84%D8%B7%D8%A9-%D9%84%D9%88%D8%A7%D8%A1-%D8%B3%D8%AD%D8%A7%D8%A8-100057617641633/?_rdc=1&_rdr#" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-links-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" id="footer-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="footer-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="footer-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="footer-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="footer-contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-contact-title">معلومات التواصل</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="footer-address">سحاب، شارع الستين، الأردن</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@aishaummalmu.edu.jo</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+962 6 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="footer-hours">الأحد - الخميس: 7:00 ص - 2:00 م</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="footer-copyright">&copy; 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // كائن الترجمة يحتوي على النصوص باللغتين العربية والإنجليزية
+        const translations = {
+            ar: {
+                // شريط الأخبار
+                "news1": "وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية",
+                "news2": "افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن",
+                "news3": "إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية",
+                "news4": "وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي",
+                "news5": "زيارة وزير التربية والتعليم لمدرسة عائشة أم المؤمنين",
+
+                // إمكانية الوصول
+                "access-small": "نص صغير",
+                "access-medium": "نص متوسط",
+                "access-large": "نص كبير",
+                "access-high": "تباين عالي",
+                "access-normal": "تباين عادي",
+
+                // شريط التنقل
+                "school-name": "مدرسة عائشة أم المؤمنين",
+                "school-subtitle": "الثانوية الشاملة المختلطة - لواء سحاب",
+                "nav-home": "الرئيسية",
+                "nav-about": "عن المدرسة",
+                "nav-academic": "الأنظمة الأكاديمية",
+                "nav-facilities": "المرافق",
+                "nav-contact": "اتصل بنا",
+
+                // رأس الصفحة
+                "contact-hero-title": "اتصل بنا",
+                "contact-hero-subtitle": "نحن هنا للإجابة على جميع استفساراتكم ومساعدتكم في رحلة تعليم أبنائكم",
+
+                // معلومات الاتصال
+                "contact-location-title": "موقعنا",
+                "contact-location-desc": "سحاب، شارع الستين<br>لواء سحاب<br>المملكة الأردنية الهاشمية",
+                "contact-email-title": "راسلنا",
+                "contact-email-desc": "نرد على استفساراتكم خلال 24 ساعة",
+                "contact-hours-title": "أوقات العمل",
+                "contact-days": "الأحد - الخميس",
+                "contact-time": "7:00 صباحاً - 2:00 ظهراً",
+                "contact-reception": "استقبال أولياء الأمور: 9:00 ص - 1:00 ظ",
+
+                // نموذج الاتصال
+                "form-title": "أرسل لنا رسالة",
+                "form-subtitle": "املأ النموذج أدناه وسنتواصل معك في أقرب وقت ممكن",
+                "first-name-label": "الاسم الأول",
+                "last-name-label": "الاسم الأخير",
+                "email-label": "البريد الإلكتروني",
+                "phone-label": "رقم الهاتف",
+                "subject-label": "الموضوع",
+                "select-subject": "اختر الموضوع",
+                "option-inquiry": "استفسار عام",
+                "option-admission": "استفسار عن التسجيل",
+                "option-academic": "استفسار أكاديمي",
+                "option-facilities": "استفسار عن المرافق",
+                "option-complaint": "شكوى",
+                "option-suggestion": "اقتراح",
+                "option-other": "أخرى",
+                "message-label": "رسالتك",
+                "privacy-label": "أوافق على معالجة بياناتي الشخصية وفقاً لسياسة الخصوصية",
+                "submit-btn": "إرسال الرسالة",
+
+                // الخريطة
+                "map-title": "اعثر علينا",
+                "map-subtitle": "موقع مدرسة عائشة أم المؤمنين في لواء سحاب",
+                "location-title": "مدرسة عائشة أم المؤمنين",
+                "location-address": "سحاب، شارع الستين<br>لواء سحاب، الأردن",
+                "directions-btn": "احصل على الاتجاهات",
+
+                // الأسئلة الشائعة
+                "faq-title": "أسئلة شائعة",
+                "faq-subtitle": "إجابات على أكثر الأسئلة شيوعاً من أولياء الأمور",
+                "faq-1-title": "كيف يمكنني تسجيل ابني/ابنتي في المدرسة؟",
+                "faq-1-answer": "يمكنكم زيارة المدرسة خلال أوقات العمل الرسمية مع إحضار المستندات المطلوبة، أو ملء نموذج الاتصال وسنتواصل معكم لتحديد موعد.",
+                "faq-2-title": "ما الفرق بين النظام الأردني والبريطاني؟",
+                "faq-2-answer": "النظام الأردني يركز على المنهاج الوطني، بينما البريطاني دولي المعايير. يمكنكم زيارة صفحة الأنظمة الأكاديمية لمقارنة مفصلة.",
+                "faq-3-title": "هل يمكنني زيارة المدرسة قبل التسجيل؟",
+                "faq-3-answer": "نعم، نرحب بزيارتكم. يرجى حجز موعد مسبق عبر النموذج أعلاه أو الاتصال بنا لتنسيق الزيارة.",
+                "faq-4-title": "ما هي الرسوم الدراسية والخدمات المقدمة؟",
+                "faq-4-answer": "تختلف الرسوم حسب النظام التعليمي والمرحلة. يمكنكم التواصل معنا للحصول على تفاصيل شاملة عن الرسوم والخدمات.",
+
+                // الفوتر
+                "footer-school-name": "مدرسة عائشة أم المؤمنين",
+                "footer-school-subtitle": "الثانوية المختلطة - لواء سحاب",
+                "footer-desc": "تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل",
+                "footer-links-title": "روابط سريعة",
+                "footer-home": "الرئيسية",
+                "footer-about": "عن المدرسة",
+                "footer-academic": "الأنظمة الأكاديمية",
+                "footer-facilities": "المرافق",
+                "footer-contact": "اتصل بنا",
+                "footer-contact-title": "معلومات التواصل",
+                "footer-address": "سحاب، شارع الستين، الأردن",
+                "footer-hours": "الأحد - الخميس: 7:00 ص - 2:00 م",
+                "footer-copyright": "© 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة."
+            },
+            en: {
+                // شريط الأخبار
+                "news1": "Ministry of Education launches initiative to improve education quality in Jordanian schools",
+                "news2": "Opening training workshops for teachers on digital education in Jordan",
+                "news3": "Launching a new educational platform to support students in various Jordanian governorates",
+                "news4": "Ministry of Education issues report on school performance in Jordan for current academic year",
+                "news5": "Visit of the Minister of Education to Aisha Umm al-Mu'minin School",
+
+                // إمكانية الوصول
+                "access-small": "Small text",
+                "access-medium": "Medium text",
+                "access-large": "Large text",
+                "access-high": "High contrast",
+                "access-normal": "Normal contrast",
+
+                // شريط التنقل
+                "school-name": "Aisha Umm al-Mu'minin School",
+                "school-subtitle": "Comprehensive Co-educational Secondary - Sahab District",
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-academic": "Academic Systems",
+                "nav-facilities": "Facilities",
+                "nav-contact": "Contact Us",
+
+                // رأس الصفحة
+                "contact-hero-title": "Contact Us",
+                "contact-hero-subtitle": "We are here to answer all your inquiries and assist you in your children's educational journey",
+
+                // معلومات الاتصال
+                "contact-location-title": "Our Location",
+                "contact-location-desc": "Sahab, Al-Siteen Street<br>Sahab District<br>Hashemite Kingdom of Jordan",
+                "contact-email-title": "Email Us",
+                "contact-email-desc": "We respond to your inquiries within 24 hours",
+                "contact-hours-title": "Working Hours",
+                "contact-days": "Sunday - Thursday",
+                "contact-time": "7:00 AM - 2:00 PM",
+                "contact-reception": "Parents reception: 9:00 AM - 1:00 PM",
+
+                // نموذج الاتصال
+                "form-title": "Send Us a Message",
+                "form-subtitle": "Fill out the form below and we will contact you as soon as possible",
+                "first-name-label": "First Name",
+                "last-name-label": "Last Name",
+                "email-label": "Email Address",
+                "phone-label": "Phone Number",
+                "subject-label": "Subject",
+                "select-subject": "Select Subject",
+                "option-inquiry": "General Inquiry",
+                "option-admission": "Admission Inquiry",
+                "option-academic": "Academic Inquiry",
+                "option-facilities": "Facilities Inquiry",
+                "option-complaint": "Complaint",
+                "option-suggestion": "Suggestion",
+                "option-other": "Other",
+                "message-label": "Your Message",
+                "privacy-label": "I agree to the processing of my personal data according to the privacy policy",
+                "submit-btn": "Send Message",
+
+                // الخريطة
+                "map-title": "Find Us",
+                "map-subtitle": "Location of Aisha Umm al-Mu'minin School in Sahab District",
+                "location-title": "Aisha Umm al-Mu'minin School",
+                "location-address": "Sahab, Al-Siteen Street<br>Sahab District, Jordan",
+                "directions-btn": "Get Directions",
+
+                // الأسئلة الشائعة
+                "faq-title": "Frequently Asked Questions",
+                "faq-subtitle": "Answers to the most common questions from parents",
+                "faq-1-title": "How can I register my son/daughter in the school?",
+                "faq-1-answer": "You can visit the school during official working hours with the required documents, or fill out the contact form and we will contact you to set an appointment.",
+                "faq-2-title": "What is the difference between the Jordanian and British systems?",
+                "faq-2-answer": "The Jordanian system focuses on the national curriculum, while the British system has international standards. You can visit the Academic Systems page for a detailed comparison.",
+                "faq-3-title": "Can I visit the school before registration?",
+                "faq-3-answer": "Yes, we welcome your visit. Please book an appointment in advance through the form above or contact us to coordinate the visit.",
+                "faq-4-title": "What are the tuition fees and services provided?",
+                "faq-4-answer": "Fees vary according to the educational system and stage. You can contact us for comprehensive details about fees and services.",
+
+                // الفوتر
+                "footer-school-name": "Aisha Umm al-Mu'minin School",
+                "footer-school-subtitle": "Co-educational Secondary - Sahab District",
+                "footer-desc": "Distinguished education and supportive educational environment to prepare the future generation",
+                "footer-links-title": "Quick Links",
+                "footer-home": "Home",
+                "footer-about": "About Us",
+                "footer-academic": "Academic Systems",
+                "footer-facilities": "Facilities",
+                "footer-contact": "Contact Us",
+                "footer-contact-title": "Contact Information",
+                "footer-address": "Sahab, Al-Siteen Street, Jordan",
+                "footer-hours": "Sunday - Thursday: 7:00 AM - 2:00 PM",
+                "footer-copyright": "© 2024 Aisha Umm al-Mu'minin School. All rights reserved."
+            }
+        };
+
+        // اللغة الحالية
+        let currentLang = 'ar';
+
+        // دالة تبديل اللغة
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateTexts();
+        }
+
+        // دالة تحديث النصوص
+        function updateTexts() {
+            // تحديث جميع النصوص بناءً على اللغة الحالية
+            Object.keys(translations[currentLang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // وظائف إمكانية الوصول
+        function toggleAccessibility() {
+            const dropdown = document.getElementById('accessibilityDropdown');
+            dropdown.style.display = (dropdown.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function changeFontSize(size) {
+            // إزالة جميع فئات حجم الخط
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            
+            // إضافة الفئة المطلوبة
+            document.body.classList.add(`font-${size}`);
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        function changeContrast(type) {
+            // إزالة جميع فئات التباين
+            document.body.classList.remove('contrast-high', 'contrast-normal');
+            
+            // إضافة الفئة المطلوبة
+            if (type === 'high') {
+                document.body.classList.add('contrast-high');
+            } else {
+                document.body.classList.add('contrast-normal');
+            }
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        // وظيفة القائمة المتنقلة
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTexts();
+            
+            // إضافة تأثيرات ظهور متدرجة للعناصر
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            animateElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.1}s`;
+            });
+            
+            // إضافة حدث إرسال النموذج
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>

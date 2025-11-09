@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+            <link rel="icon" type="image/png" href="lif (1).png" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المرافق - مدرسة عائشة أم المؤمنين</title>
+    <meta name="description" content="استكشف مرافق مدرسة عائشة أم المؤمنين المتطورة: المختبرات والملاعب والمسرح والمكتبة">
+    
+    <!-- تحسين أداء تحميل الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c5530;
+            --secondary: #4a7c59;
+            --accent: #c48e5f;
+            --light: #f8f9fa;
+            --dark: #2d3e36;
+            --neutral: #6c757d;
+            --success: #7aa893;
+            --warning: #e6c57a;
+            --danger: #d97706;
+            --gradient: linear-gradient(135deg, #2c5530, #4a7c59);
+            --gradient-light: linear-gradient(135deg, #4a7c59, #c48e5f);
+            --light-bg: #f9fbf8;
+            --text-dark: #2d3e36;
+            --text-light: #6c757d;
+            --primary-dark: #1e3a23;
+            --primary-light: #3a6b47;
+            --card-bg: #ffffff;
+            --section-bg: #f9fbf8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            transition: font-size 0.3s ease, filter 0.3s ease;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* أحجام الخطوط المختلفة */
+        body.font-small {
+            font-size: 14px;
+        }
+
+        body.font-medium {
+            font-size: 16px;
+        }
+
+        body.font-large {
+            font-size: 18px;
+        }
+
+        /* التباين العالي */
+        body.contrast-high {
+            --primary: #000000;
+            --secondary: #333333;
+            --light: #ffffff;
+            --dark: #000000;
+            --accent: #ff6600;
+            color: #000000;
+            background-color: #ffffff;
+        }
+
+        body.contrast-high * {
+            color: #000000 !important;
+            background-color: #ffffff !important;
+            border-color: #000000 !important;
+        }
+
+        body.contrast-high .btn,
+        body.contrast-high .stat-icon,
+        body.contrast-high .feature-icon,
+        body.contrast-high .system-icon {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            border: 2px solid #000000 !important;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ========== شريط الأخبار المحدث ========== */
+        .news-bar {
+            background-color: var(--primary);
+            color: #fff;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        .news-wrapper {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll 60s linear infinite;
+        }
+
+        .news-wrapper a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 50px;
+            font-size: 14px;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* ========== زر إمكانية الوصول المحدث ========== */
+        .accessibility-side {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .accessibility-btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .accessibility-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .accessibility-dropdown {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            min-width: 180px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+        }
+
+        .accessibility-dropdown a {
+            display: block;
+            padding: 8px 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .accessibility-dropdown a:hover {
+            background-color: #eee;
+        }
+
+        /* ========== الشريط العلوي المحدث ========== */
+        .main-nav {
+            background: var(--primary);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--accent);
+            background: rgba(255,255,255,0.1);
+        }
+
+        .language-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+        }
+
+        .language-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ========== تصميم جديد لصفحة المرافق ========== */
+        .facilities-hero {
+            background: linear-gradient(135deg, rgba(44, 85, 48, 0.9), rgba(74, 124, 89, 0.9)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .facilities-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .facilities-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .facilities-grid {
+            padding: 80px 0;
+            background: var(--section-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .facilities-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+        }
+
+        .facility-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .facility-image {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .facility-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            filter: brightness(0.95);
+        }
+
+        .facility-card:hover .facility-image img {
+            transform: scale(1.08);
+            filter: brightness(1);
+        }
+
+        .facility-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            color: white;
+            opacity: 1;
+        }
+
+        .facility-overlay h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .facility-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .facility-card:hover .facility-icon {
+            transform: scale(1.1);
+            background: var(--primary);
+            color: white;
+        }
+
+        .facility-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .facility-content h3 {
+            color: var(--primary);
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .facility-content p {
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 1.8rem;
+            flex-grow: 1;
+        }
+
+        .facility-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 1.8rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .feature-item i {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        /* إزالة أزرار اكتشف المزيد */
+
+        .safety-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .safety-card {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .safety-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary);
+        }
+
+        .safety-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .safety-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 20px rgba(44, 85, 48, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .safety-card:hover .safety-icon {
+            transform: scale(1.1);
+        }
+
+        .safety-card h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .safety-card p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .gallery-section {
+            padding: 80px 0;
+            background: var(--section-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 280px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.95);
+        }
+
+        .gallery-item:hover img {
+            filter: brightness(1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            display: flex;
+            align-items: flex-end;
+            padding: 25px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .cta-facilities {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            border-radius: 30px;
+            margin: 70px 0;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-facilities::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .cta-facilities .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-facilities h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-facilities p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-visit {
+            background: white;
+            color: var(--primary);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            display: inline-block;
+        }
+
+        .btn-visit:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        }
+
+        /* ========== التذييل المحدث ========== */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* تأثيرات الحركة */
+        .animate-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تحسينات للعرض على الجوال */
+        @media (max-width: 1200px) {
+            .safety-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .facilities-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .facilities-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .facilities-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .facility-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-facilities h2 {
+                font-size: 2.2rem;
+            }
+            
+            .cta-facilities p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-medium">
+    <!-- ========== شريط الأخبار المحدث ========== -->
+    <div class="news-bar">
+        <div class="news-wrapper">
+            <a href="#" id="news1">وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية</a>
+            <a href="#" id="news2">افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن</a>
+            <a href="#" id="news3">إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية</a>
+            <a href="#" id="news4">وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي</a>
+            <a href="#" id="news5">زيارة وزير التربية والتعليم لمدرسة عائشة أم المؤمنين</a>
+        </div>
+    </div>
+
+    <!-- ========== زر إمكانية الوصول المحدث ========== -->
+    <div class="accessibility-side">
+        <button class="accessibility-btn" title="إمكانية الوصول" onclick="toggleAccessibility()">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        <div class="accessibility-dropdown" id="accessibilityDropdown">
+            <a href="#" onclick="changeFontSize('small')"><i class="fas fa-text-height"></i> <span id="access-small">نص صغير</span></a>
+            <a href="#" onclick="changeFontSize('medium')"><i class="fas fa-text-height"></i> <span id="access-medium">نص متوسط</span></a>
+            <a href="#" onclick="changeFontSize('large')"><i class="fas fa-text-height"></i> <span id="access-large">نص كبير</span></a>
+            <a href="#" onclick="changeContrast('high')"><i class="fas fa-adjust"></i> <span id="access-high">تباين عالي</span></a>
+            <a href="#" onclick="changeContrast('normal')"><i class="fas fa-adjust"></i> <span id="access-normal">تباين عادي</span></a>
+        </div>
+    </div>
+
+    <!-- ========== الشريط العلوي المحدث ========== -->
+    <header class="header">
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h1 id="school-name">مدرسة عائشة أم المؤمنين</h1>
+                            <p id="school-subtitle">الثانوية الشاملة المختلطة - لواء سحاب</p>
+                        </div>
+                    </a>
+                    
+                    <ul class="nav-menu" id="nav-menu">
+                        <li><a href="index.html" id="nav-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="nav-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="nav-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" class="active" id="nav-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="nav-contact">اتصل بنا</a></li>
+                        <li>
+                            <button class="language-btn" onclick="toggleLanguage()" title="تغيير اللغة">
+                                <i class="fas fa-language"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="facilities-hero">
+        <div class="container">
+            <h1 id="facilities-hero-title">مرافق مدرستنا المتطورة</h1>
+            <p id="facilities-hero-subtitle">اكتشف بيئة تعليمية استثنائية تجمع بين التصميم الحديث والتقنيات المتطورة لدعم تعلم وإبداع طلابنا</p>
+        </div>
+    </section>
+
+    <!-- Facilities Grid -->
+    <section class="facilities-grid">
+        <div class="container">
+            <!-- Laboratories Section -->
+            <div class="facility-category">
+                <div class="section-header">
+                    <h2 id="labs-category-title">المختبرات العلمية</h2>
+                    <p id="labs-category-desc">مختبرات مجهزة بأحدث التقنيات لدعم التجارب العملية والبحث العلمي</p>
+                </div>
+                <div class="facilities-cards">
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="مختبر الفيزياء" loading="lazy">
+                            <div class="facility-overlay">
+                                <h3 id="physics-lab-title">مختبر الفيزياء</h3>
+                            </div>
+                            <div class="facility-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                        </div>
+                        <div class="facility-content">
+                            <h3 id="physics-lab-title2">مختبر الفيزياء</h3>
+                            <p id="physics-lab-desc">مجهز بأحدث الأجهزة والتقنيات لإجراء التجارب الفيزيائية المتقدمة والتعرف على قوانين الطبيعة.</p>
+                            <div class="facility-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-modern-equip">أجهزة حديثة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-safety-tools">أدوات السلامة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-interactive">تعليم تفاعلي</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-expert">إشراف متخصص</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="مختبر الكيمياء" loading="lazy">
+                            <div class="facility-overlay">
+                                <h3 id="chemistry-lab-title">مختبر الكيمياء</h3>
+                            </div>
+                            <div class="facility-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                        </div>
+                        <div class="facility-content">
+                            <h3 id="chemistry-lab-title2">مختبر الكيمياء</h3>
+                            <p id="chemistry-lab-desc">بيئة آمنة ومجهزة لإجراء التجارب الكيميائية واستكشاف عالم التفاعلات والمركبات.</p>
+                            <div class="facility-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-chemicals">مواد كيميائية آمنة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-ventilation">نظام تهوية</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-protective">ملابس وقائية</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-emergency">بروتوكولات طوارئ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Labs Section -->
+            <div class="facility-category">
+                <div class="section-header">
+                    <h2 id="tech-labs-title">المختبرات التقنية</h2>
+                    <p id="tech-labs-desc">معامل حاسوب متطورة مجهزة بأحدث الأجهزة والبرمجيات التعليمية</p>
+                </div>
+                <div class="facilities-cards">
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="مختبر الحاسوب" loading="lazy">
+                            <div class="facility-overlay">
+                                <h3 id="computer-lab-title">مختبر الحاسوب</h3>
+                            </div>
+                            <div class="facility-icon">
+                                <i class="fas fa-desktop"></i>
+                            </div>
+                        </div>
+                        <div class="facility-content">
+                            <h3 id="computer-lab-title2">مختبر الحاسوب</h3>
+                            <p id="computer-lab-desc">مجهز بأحدث أجهزة الحاسوب وبرامج التصميم والبرمجة لدعم التعليم الرقمي.</p>
+                            <div class="facility-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-computers">أجهزة حديثة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-design">برامج تصميم</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-programming">أدوات برمجة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-internet">إنترنت عالي السرعة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports Facilities Section -->
+            <div class="facility-category">
+                <div class="section-header">
+                    <h2 id="sports-category-title">المرافق الرياضية</h2>
+                    <p id="sports-category-desc">ملاعب ومرافق رياضية متنوعة لتنمية المواهب وتعزيز الصحة</p>
+                </div>
+                <div class="facilities-cards">
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80" alt="ملاعب الرياضة" loading="lazy">
+                            <div class="facility-overlay">
+                                <h3 id="sports-field-title">الملاعب الرياضية</h3>
+                            </div>
+                            <div class="facility-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                        </div>
+                        <div class="facility-content">
+                            <h3 id="sports-field-title2">الملاعب الرياضية</h3>
+                            <p id="sports-field-desc">ملاعب متعددة لكرة القدم، السلة، الطائرة، وألعاب القوى بمقاسات أولمبية.</p>
+                            <div class="facility-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-football">ملعب كرة القدم</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-basketball">ملعب كرة السلة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-volleyball">ملعب كرة الطائرة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-athletics">ملعب ألعاب القوى</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Religious Facilities Section -->
+
+            <!-- Cultural Facilities Section -->
+            <div class="facility-category">
+                <div class="section-header">
+                    <h2 id="cultural-category-title">المرافق الثقافية</h2>
+                    <p id="cultural-category-desc">مرافق ثقافية ومعرفية لتنمية المهارات والإبداع</p>
+                </div>
+                <div class="facilities-cards">
+                    <div class="facility-card animate-fade-in">
+                        <div class="facility-image">
+                            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="المكتبة" loading="lazy">
+                            <div class="facility-overlay">
+                                <h3 id="library-title">المكتبة</h3>
+                            </div>
+                            <div class="facility-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                        </div>
+                        <div class="facility-content">
+                            <h3 id="library-title2">المكتبة</h3>
+                            <p id="library-desc">مكتبة شاملة تضم آلاف الكتب والمراجع في مختلف المجالات العلمية والأدبية.</p>
+                            <div class="facility-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-books2">آلاف الكتب</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-research">مراجع بحثية</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-reading">قاعات قراءة</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check"></i>
+                                    <span id="feature-digital">موارد رقمية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section class="safety-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="safety-title">السلامة والأمان</h2>
+                <p id="safety-desc">نولي اهتماماً خاصاً لأمان وحماية طلابنا وكادرنا التعليمي</p>
+            </div>
+            
+            <div class="safety-grid">
+                <div class="safety-card animate-fade-in">
+                    <div class="safety-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 id="safety-cctv">نظام مراقبة متكامل</h3>
+                    <p id="safety-cctv-desc">كاميرات مراقبة حديثة تغطي جميع أنحاء المدرسة لضمان بيئة آمنة.</p>
+                </div>
+                
+                <div class="safety-card animate-fade-in">
+                    <div class="safety-icon">
+                        <i class="fas fa-fire-extinguisher"></i>
+                    </div>
+                    <h3 id="safety-fire">أنظمة السلامة من الحريق</h3>
+                    <p id="safety-fire-desc">أجهزة إنذار وإطفاء حديثة مع تدريبات منتظمة للطلاب والكادر.</p>
+                </div>
+                
+                <div class="safety-card animate-fade-in">
+                    <div class="safety-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 id="safety-guard">حراسة أمنية متخصصة</h3>
+                    <p id="safety-guard-desc">حراس أمن مدربون على أعلى مستوى يعملون على مدار الساعات المدرسية.</p>
+                </div>
+                
+                <div class="safety-card animate-fade-in">
+                    <div class="safety-icon">
+                        <i class="fas fa-first-aid"></i>
+                    </div>
+                    <h3 id="safety-health">الرعاية الصحية</h3>
+                    <p id="safety-health-desc">ممرضة مدرسية وعيادة طبية مجهزة بأحدث المعدات الطبية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="gallery-title">معرض المرافق</h2>
+                <p id="gallery-desc">جولة مصورة في مرافق مدرستنا المتطورة</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="المختبرات العلمية" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery-labs">المختبرات العلمية</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="المكتبة" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery-library">المكتبة</h4>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80" alt="الملاعب الرياضية" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery-sports">الملاعب الرياضية</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80" alt="مختبر الحاسوب" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 id="gallery-computer">مختبر الحاسوب</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-facilities">
+        <div class="container">
+            <h2 id="cta-facilities-title">زر مرافقنا المتطورة</h2>
+            <p id="cta-facilities-desc">احجز موعداً لزيارة المدرسة والتعرف على مرافقنا المتميزة عن قرب</p>
+            <a href="contact.html" class="btn-visit" id="cta-facilities-btn">احجز زيارة الآن</a>
+        </div>
+    </section>
+
+    <!-- ========== التذييل المحدث ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div class="logo-text">
+                            <h3 id="footer-school-name">مدرسة عائشة أم المؤمنين</h3>
+                            <p id="footer-school-subtitle">الثانوية المختلطة - لواء سحاب</p>
+                        </div>
+                    </div>
+                    <p id="footer-desc">تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل</p>
+                    <div class="social-links">
+                        <a href="https://web.facebook.com/p/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B9%D8%A7%D8%A6%D8%B4%D8%A9-%D8%A3%D9%85-%D8%A7%D9%84%D9%85%D8%A4%D9%85%D9%86%D9%8A%D9%86-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AE%D8%AA%D9%84%D8%B7%D8%A9-%D9%84%D9%88%D8%A7%D8%A1-%D8%B3%D8%AD%D8%A7%D8%A8-100057617641633/?_rdc=1&_rdr#" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-links-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" id="footer-home">الرئيسية</a></li>
+                        <li><a href="about.html" id="footer-about">عن المدرسة</a></li>
+                        <li><a href="academic.html" id="footer-academic">الأنظمة الأكاديمية</a></li>
+                        <li><a href="facilities.html" id="footer-facilities">المرافق</a></li>
+                        <li><a href="contact.html" id="footer-contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 id="footer-contact-title">معلومات التواصل</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span id="footer-address">سحاب، شارع الستين، الأردن</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@aishaummalmu.edu.jo</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+962 6 123 4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="footer-hours">الأحد - الخميس: 7:00 ص - 2:00 م</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="footer-copyright">&copy; 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // كائن الترجمة يحتوي على النصوص باللغتين العربية والإنجليزية
+        const translations = {
+            ar: {
+                // شريط الأخبار
+                "news1": "وزارة التربية والتعليم تطلق مبادرة لتحسين جودة التعليم في المدارس الأردنية",
+                "news2": "افتتاح ورش تدريبية للمعلمين حول التعليم الرقمي في الأردن",
+                "news3": "إطلاق منصة تعليمية جديدة لدعم الطلاب في مختلف المحافظات الأردنية",
+                "news4": "وزارة التعليم تصدر تقريرًا حول أداء المدارس في الأردن للعام الدراسي الحالي",
+                "news5": "زيارة وزير التربية والتعليم لمدرسة عائشة أم المؤمنين",
+
+                // إمكانية الوصول
+                "access-small": "نص صغير",
+                "access-medium": "نص متوسط",
+                "access-large": "نص كبير",
+                "access-high": "تباين عالي",
+                "access-normal": "تباين عادي",
+
+                // شريط التنقل
+                "school-name": "مدرسة عائشة أم المؤمنين",
+                "school-subtitle": "الثانوية الشاملة المختلطة - لواء سحاب",
+                "nav-home": "الرئيسية",
+                "nav-about": "عن المدرسة",
+                "nav-academic": "الأنظمة الأكاديمية",
+                "nav-facilities": "المرافق",
+                "nav-contact": "اتصل بنا",
+
+                // رأس الصفحة
+                "facilities-hero-title": "مرافق مدرستنا المتطورة",
+                "facilities-hero-subtitle": "اكتشف بيئة تعليمية استثنائية تجمع بين التصميم الحديث والتقنيات المتطورة لدعم تعلم وإبداع طلابنا",
+
+                // المختبرات العلمية
+                "labs-category-title": "المختبرات العلمية",
+                "labs-category-desc": "مختبرات مجهزة بأحدث التقنيات لدعم التجارب العملية والبحث العلمي",
+                "physics-lab-title": "مختبر الفيزياء",
+                "physics-lab-title2": "مختبر الفيزياء",
+                "physics-lab-desc": "مجهز بأحدث الأجهزة والتقنيات لإجراء التجارب الفيزيائية المتقدمة والتعرف على قوانين الطبيعة.",
+                "feature-modern-equip": "أجهزة حديثة",
+                "feature-safety-tools": "أدوات السلامة",
+                "feature-interactive": "تعليم تفاعلي",
+                "feature-expert": "إشراف متخصص",
+                "chemistry-lab-title": "مختبر الكيمياء",
+                "chemistry-lab-title2": "مختبر الكيمياء",
+                "chemistry-lab-desc": "بيئة آمنة ومجهزة لإجراء التجارب الكيميائية واستكشاف عالم التفاعلات والمركبات.",
+                "feature-chemicals": "مواد كيميائية آمنة",
+                "feature-ventilation": "نظام تهوية",
+                "feature-protective": "ملابس وقائية",
+                "feature-emergency": "بروتوكولات طوارئ",
+
+                // المختبرات التقنية
+                "tech-labs-title": "المختبرات التقنية",
+                "tech-labs-desc": "معامل حاسوب متطورة مجهزة بأحدث الأجهزة والبرمجيات التعليمية",
+                "computer-lab-title": "مختبر الحاسوب",
+                "computer-lab-title2": "مختبر الحاسوب",
+                "computer-lab-desc": "مجهز بأحدث أجهزة الحاسوب وبرامج التصميم والبرمجة لدعم التعليم الرقمي.",
+                "feature-computers": "أجهزة حديثة",
+                "feature-design": "برامج تصميم",
+                "feature-programming": "أدوات برمجة",
+                "feature-internet": "إنترنت عالي السرعة",
+
+                // المرافق الرياضية
+                "sports-category-title": "المرافق الرياضية",
+                "sports-category-desc": "ملاعب ومرافق رياضية متنوعة لتنمية المواهب وتعزيز الصحة",
+                "sports-field-title": "الملاعب الرياضية",
+                "sports-field-title2": "الملاعب الرياضية",
+                "sports-field-desc": "ملاعب متعددة لكرة القدم، السلة، الطائرة، وألعاب القوى بمقاسات أولمبية.",
+                "feature-football": "ملعب كرة القدم",
+                "feature-basketball": "ملعب كرة السلة",
+                "feature-volleyball": "ملعب كرة الطائرة",
+                "feature-athletics": "ملعب ألعاب القوى",
+
+                // المرافق الدينية
+                "religious-category-title": "المرافق الدينية",
+                "religious-category-desc": "مرافق دينية مخصصة للعبادة والتأمل الروحي",
+                "mosque-title": "المصلى",
+                "mosque-title2": "المصلى",
+                "mosque-desc": "مكان هادئ ومصمم بشكل جميل للعبادة والتأمل الروحي، مجهز بجميع المرافق اللازمة.",
+                "feature-prayer": "مكان للصلاة",
+                "feature-quiet": "بيئة هادئة",
+                "feature-wudu": "مرافق الوضوء",
+                "feature-books": "كتب دينية",
+
+                // المرافق الثقافية
+                "cultural-category-title": "المرافق الثقافية",
+                "cultural-category-desc": "مرافق ثقافية ومعرفية لتنمية المهارات والإبداع",
+                "library-title": "المكتبة",
+                "library-title2": "المكتبة",
+                "library-desc": "مكتبة شاملة تضم آلاف الكتب والمراجع في مختلف المجالات العلمية والأدبية.",
+                "feature-books2": "آلاف الكتب",
+                "feature-research": "مراجع بحثية",
+                "feature-reading": "قاعات قراءة",
+                "feature-digital": "موارد رقمية",
+
+                // السلامة والأمان
+                "safety-title": "السلامة والأمان",
+                "safety-desc": "نولي اهتماماً خاصاً لأمان وحماية طلابنا وكادرنا التعليمي",
+                "safety-cctv": "نظام مراقبة متكامل",
+                "safety-cctv-desc": "كاميرات مراقبة حديثة تغطي جميع أنحاء المدرسة لضمان بيئة آمنة.",
+                "safety-fire": "أنظمة السلامة من الحريق",
+                "safety-fire-desc": "أجهزة إنذار وإطفاء حديثة مع تدريبات منتظمة للطلاب والكادر.",
+                "safety-guard": "حراسة أمنية متخصصة",
+                "safety-guard-desc": "حراس أمن مدربون على أعلى مستوى يعملون على مدار الساعات المدرسية.",
+                "safety-health": "الرعاية الصحية",
+                "safety-health-desc": "ممرضة مدرسية وعيادة طبية مجهزة بأحدث المعدات الطبية.",
+
+                // المعرض
+                "gallery-title": "معرض المرافق",
+                "gallery-desc": "جولة مصورة في مرافق مدرستنا المتطورة",
+                "gallery-labs": "المختبرات العلمية",
+                "gallery-library": "المكتبة",
+                "gallery-sports": "الملاعب الرياضية",
+                "gallery-computer": "مختبر الحاسوب",
+
+                // قسم الدعوة
+                "cta-facilities-title": "زر مرافقنا المتطورة",
+                "cta-facilities-desc": "احجز موعداً لزيارة المدرسة والتعرف على مرافقنا المتميزة عن قرب",
+                "cta-facilities-btn": "احجز زيارة الآن",
+
+                // الفوتر
+                "footer-school-name": "مدرسة عائشة أم المؤمنين",
+                "footer-school-subtitle": "الثانوية المختلطة - لواء سحاب",
+                "footer-desc": "تعليم متميز وبيئة تربوية داعمة لإعداد جيل المستقبل",
+                "footer-links-title": "روابط سريعة",
+                "footer-home": "الرئيسية",
+                "footer-about": "عن المدرسة",
+                "footer-academic": "الأنظمة الأكاديمية",
+                "footer-facilities": "المرافق",
+                "footer-contact": "اتصل بنا",
+                "footer-contact-title": "معلومات التواصل",
+                "footer-address": "سحاب، شارع الستين، الأردن",
+                "footer-hours": "الأحد - الخميس: 7:00 ص - 2:00 م",
+                "footer-copyright": "© 2024 مدرسة عائشة أم المؤمنين. جميع الحقوق محفوظة."
+            },
+            en: {
+                // شريط الأخبار
+                "news1": "Ministry of Education launches initiative to improve education quality in Jordanian schools",
+                "news2": "Opening training workshops for teachers on digital education in Jordan",
+                "news3": "Launching a new educational platform to support students in various Jordanian governorates",
+                "news4": "Ministry of Education issues report on school performance in Jordan for current academic year",
+                "news5": "Visit of the Minister of Education to Aisha Umm al-Mu'minin School",
+
+                // إمكانية الوصول
+                "access-small": "Small text",
+                "access-medium": "Medium text",
+                "access-large": "Large text",
+                "access-high": "High contrast",
+                "access-normal": "Normal contrast",
+
+                // شريط التنقل
+                "school-name": "Aisha Umm al-Mu'minin School",
+                "school-subtitle": "Comprehensive Co-educational Secondary - Sahab District",
+                "nav-home": "Home",
+                "nav-about": "About Us",
+                "nav-academic": "Academic Systems",
+                "nav-facilities": "Facilities",
+                "nav-contact": "Contact Us",
+
+                // رأس الصفحة
+                "facilities-hero-title": "Our Advanced School Facilities",
+                "facilities-hero-subtitle": "Discover an exceptional learning environment that combines modern design and advanced technologies to support our students' learning and creativity",
+
+                // المختبرات العلمية
+                "labs-category-title": "Scientific Laboratories",
+                "labs-category-desc": "Laboratories equipped with latest technologies to support practical experiments and scientific research",
+                "physics-lab-title": "Physics Laboratory",
+                "physics-lab-title2": "Physics Laboratory",
+                "physics-lab-desc": "Equipped with the latest devices and technologies to conduct advanced physics experiments and explore the laws of nature.",
+                "feature-modern-equip": "Modern equipment",
+                "feature-safety-tools": "Safety tools",
+                "feature-interactive": "Interactive learning",
+                "feature-expert": "Expert supervision",
+                "chemistry-lab-title": "Chemistry Laboratory",
+                "chemistry-lab-title2": "Chemistry Laboratory",
+                "chemistry-lab-desc": "A safe and equipped environment for conducting chemical experiments and exploring the world of reactions and compounds.",
+                "feature-chemicals": "Safe chemicals",
+                "feature-ventilation": "Ventilation system",
+                "feature-protective": "Protective gear",
+                "feature-emergency": "Emergency protocols",
+
+                // المختبرات التقنية
+                "tech-labs-title": "Technology Laboratories",
+                "tech-labs-desc": "Advanced computer labs equipped with latest hardware and educational software",
+                "computer-lab-title": "Computer Laboratory",
+                "computer-lab-title2": "Computer Laboratory",
+                "computer-lab-desc": "Equipped with latest computers, design and programming software to support digital education.",
+                "feature-computers": "Modern computers",
+                "feature-design": "Design software",
+                "feature-programming": "Programming tools",
+                "feature-internet": "High-speed internet",
+
+                // المرافق الرياضية
+                "sports-category-title": "Sports Facilities",
+                "sports-category-desc": "Various sports fields and facilities for talent development and health promotion",
+                "sports-field-title": "Sports Fields",
+                "sports-field-title2": "Sports Fields",
+                "sports-field-desc": "Multiple fields for football, basketball, volleyball, and athletics with Olympic dimensions.",
+                "feature-football": "Football field",
+                "feature-basketball": "Basketball court",
+                "feature-volleyball": "Volleyball court",
+                "feature-athletics": "Athletics track",
+
+                // المرافق الدينية
+                "religious-category-title": "Religious Facilities",
+                "religious-category-desc": "Religious facilities dedicated to worship and spiritual reflection",
+                "mosque-title": "Prayer Room",
+                "mosque-title2": "Prayer Room",
+                "mosque-desc": "A quiet and beautifully designed space for worship and spiritual reflection, equipped with all necessary facilities.",
+                "feature-prayer": "Prayer space",
+                "feature-quiet": "Quiet environment",
+                "feature-wudu": "Ablution facilities",
+                "feature-books": "Religious books",
+
+                // المرافق الثقافية
+                "cultural-category-title": "Cultural Facilities",
+                "cultural-category-desc": "Cultural and knowledge facilities for skill development and creativity",
+                "library-title": "Library",
+                "library-title2": "Library",
+                "library-desc": "A comprehensive library containing thousands of books and references in various scientific and literary fields.",
+                "feature-books2": "Thousands of books",
+                "feature-research": "Research references",
+                "feature-reading": "Reading halls",
+                "feature-digital": "Digital resources",
+
+                // السلامة والأمان
+                "safety-title": "Safety and Security",
+                "safety-desc": "We pay special attention to the safety and protection of our students and teaching staff",
+                "safety-cctv": "Integrated surveillance system",
+                "safety-cctv-desc": "Modern surveillance cameras covering all areas of the school to ensure a safe environment.",
+                "safety-fire": "Fire safety systems",
+                "safety-fire-desc": "Modern alarm and firefighting devices with regular training for students and staff.",
+                "safety-guard": "Specialized security guards",
+                "safety-guard-desc": "Highly trained security guards working throughout school hours.",
+                "safety-health": "Healthcare",
+                "safety-health-desc": "School nurse and medical clinic equipped with latest medical equipment.",
+
+                // المعرض
+                "gallery-title": "Facilities Gallery",
+                "gallery-desc": "A photographic tour of our advanced school facilities",
+                "gallery-labs": "Scientific Laboratories",
+                "gallery-library": "Library",
+                "gallery-sports": "Sports Facilities",
+                "gallery-computer": "Computer Laboratory",
+
+                // قسم الدعوة
+                "cta-facilities-title": "Visit Our Advanced Facilities",
+                "cta-facilities-desc": "Book an appointment to visit the school and learn about our distinguished facilities up close",
+                "cta-facilities-btn": "Book a Visit Now",
+
+                // الفوتر
+                "footer-school-name": "Aisha Umm al-Mu'minin School",
+                "footer-school-subtitle": "Co-educational Secondary - Sahab District",
+                "footer-desc": "Distinguished education and supportive educational environment to prepare the future generation",
+                "footer-links-title": "Quick Links",
+                "footer-home": "Home",
+                "footer-about": "About Us",
+                "footer-academic": "Academic Systems",
+                "footer-facilities": "Facilities",
+                "footer-contact": "Contact Us",
+                "footer-contact-title": "Contact Information",
+                "footer-address": "Sahab, Al-Siteen Street, Jordan",
+                "footer-hours": "Sunday - Thursday: 7:00 AM - 2:00 PM",
+                "footer-copyright": "© 2024 Aisha Umm al-Mu'minin School. All rights reserved."
+            }
+        };
+
+        // اللغة الحالية
+        let currentLang = 'ar';
+
+        // دالة تبديل اللغة
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            updateTexts();
+        }
+
+        // دالة تحديث النصوص
+        function updateTexts() {
+            // تحديث جميع النصوص بناءً على اللغة الحالية
+            Object.keys(translations[currentLang]).forEach(key => {
+                const element = document.getElementById(key);
+                if (element) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // وظائف إمكانية الوصول
+        function toggleAccessibility() {
+            const dropdown = document.getElementById('accessibilityDropdown');
+            dropdown.style.display = (dropdown.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function changeFontSize(size) {
+            // إزالة جميع فئات حجم الخط
+            document.body.classList.remove('font-small', 'font-medium', 'font-large');
+            
+            // إضافة الفئة المطلوبة
+            document.body.classList.add(`font-${size}`);
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        function changeContrast(type) {
+            // إزالة جميع فئات التباين
+            document.body.classList.remove('contrast-high', 'contrast-normal');
+            
+            // إضافة الفئة المطلوبة
+            if (type === 'high') {
+                document.body.classList.add('contrast-high');
+            } else {
+                document.body.classList.add('contrast-normal');
+            }
+            
+            // إغلاق القائمة المنسدلة
+            document.getElementById('accessibilityDropdown').style.display = 'none';
+        }
+
+        // وظيفة القائمة المتنقلة
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTexts();
+            
+            // إضافة تأثيرات ظهور متدرجة للعناصر
+            const animateElements = document.querySelectorAll('.animate-fade-in');
+            animateElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>
